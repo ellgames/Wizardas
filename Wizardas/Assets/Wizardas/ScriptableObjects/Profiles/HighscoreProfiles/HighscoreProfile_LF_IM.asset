@@ -9,22 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1648db76ed629945bb88474ee076ba9, type: 3}
-  m_Name: ComboProfile
+  m_Script: {fileID: 11500000, guid: 81b1b3dc88d7540408668e434873de9d, type: 3}
+  m_Name: HighscoreProfile_LF_IM
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: c0947b5d16e70db45ba2d1d6f96e2d11, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: m_SystemProfile
-      Entry: 10
-      Data: 0
-    - Name: m_ComboCount
+    - Name: m_Score
       Entry: 3
       Data: 0

@@ -9,12 +9,9 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.Meta
 {
-    public enum GAME_DIFFICULTY
+    public enum GAME_MODE
     {
-        Novice,
-        Hard,
-        Elite,
-        Master,
-        Impossible
+        LimitFight,
+        FinalFight
     }
 }

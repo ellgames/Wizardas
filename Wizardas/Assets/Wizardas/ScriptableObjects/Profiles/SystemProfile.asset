@@ -27,3 +27,18 @@ MonoBehaviour:
     - Name: m_DefaultSaveDirectory
       Entry: 1
       Data: SaveData/
+    - Name: m_SaveFileName_ComboCount
+      Entry: 1
+      Data: ComboCount
+    - Name: m_SaveFileName_Highscore_LF_IM
+      Entry: 1
+      Data: HighscoreLFIM
+    - Name: m_SaveFileName_Highscore_LF_MA
+      Entry: 1
+      Data: HighscoreLFMA
+    - Name: m_SaveFileName_Highscore_FF_IM
+      Entry: 1
+      Data: HighscoreFFIM
+    - Name: m_SaveFileName_Highscore_FF_MA
+      Entry: 1
+      Data: HighscoreFFMA
