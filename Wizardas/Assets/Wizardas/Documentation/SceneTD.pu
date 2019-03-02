@@ -1,0 +1,26 @@
+@startuml
+
+class LogoScene
+class OpeningScene
+class TitleScene
+class MyRoomScene
+class CampScene
+class PreLoadScene
+class LoadScene
+class GameScene
+class ResultScene
+
+LogoScene --> OpeningScene
+LogoScene .> TitleScene
+OpeningScene --> TitleScene
+TitleScene <-> MyRoomScene
+TitleScene <--> CampScene
+CampScene --> PreLoadScene
+PreLoadScene --> LoadScene
+LoadScene --> GameScene
+GameScene --> ResultScene
+ResultScene --> CampScene
+ResultScene --> TitleScene
+ResultScene --> PreLoadScene
+
+@enduml
