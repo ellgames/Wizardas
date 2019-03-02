@@ -1,2 +1,2 @@
-# Wiz
+# Wizardas
 Wizardas
