@@ -6,7 +6,7 @@ class TitleScene
 class MyRoomScene
 class CampScene
 class PreLoadScene
-class AreaLoadScene
+class LoadScene
 class GameScene
 class ResultScene
 
@@ -16,8 +16,8 @@ OpeningScene --> TitleScene
 TitleScene <-> MyRoomScene
 TitleScene <--> CampScene
 CampScene --> PreLoadScene
-PreLoadScene --> AreaLoadScene
-AreaLoadScene --> GameScene
+PreLoadScene --> LoadScene
+LoadScene --> GameScene
 GameScene --> ResultScene
 ResultScene --> CampScene
 ResultScene --> TitleScene
