@@ -11,6 +11,48 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 {
     public class SkillManager : SerializedMonoBehaviour
     {
-	
+        [Title("Required")]
+        [OdinSerialize, Required] IDeadWatch m_IDeadWatch;
+        [OdinSerialize, Required] List<UseSkillCommandBase> m_UseSkillCommands = new List<UseSkillCommandBase>();
+
+        UseSkillCommandBase SearchUseSkillCommand(string skillIdentifier)
+        {
+            UseSkillCommandBase found = null;
+
+            m_UseSkillCommands.ForEach(command =>
+            {
+                if (command.SkillInfo.SkillIdentifier == skillIdentifier) found = command;
+            });
+
+            return found;
+        }
+
+        bool CanUseSkill(UseSkillCommandBase target)
+        {
+            Debug.Assert(target != null);
+
+            if (m_IDeadWatch.IsDead()) return false;
+            if (target.UsingTimeRemain > 0f) return false;
+            if (target.CoolTimeRemain > 0f) return false;
+
+            return true;
+        }
+
+        /// <summary>
+        /// スキルを使用します。
+        /// </summary>
+        /// <param name="skillIdentifier"></param>
+        /// <returns>スキルの使用に成功した場合はtrueを、失敗した場合はfalseを返します。</returns>
+	    public bool UseSkill(string skillIdentifier)
+        {
+            var target = SearchUseSkillCommand(skillIdentifier);
+
+            if (target == null) return false;
+            if (!CanUseSkill(target)) return false;
+
+            target.Execute();
+
+            return true;
+        }
     }
 }

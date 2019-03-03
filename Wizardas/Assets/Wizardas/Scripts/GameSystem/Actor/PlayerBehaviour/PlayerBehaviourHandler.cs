@@ -11,19 +11,23 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 {
     public class PlayerBehaviourHandler : SerializedMonoBehaviour
     {
-	    public void UseSkill(string skillName)
-        {
+        [Title("Required")]
+        [OdinSerialize, Required] PlayerMove m_PlayerMove;
+        [OdinSerialize, Required] SkillManager m_SkillManager;
 
+	    public void UseSkill(string skillIdentifier)
+        {
+            m_SkillManager.UseSkill(skillIdentifier);
         }
 
         public void AllowMove()
         {
-
+            m_PlayerMove.AllowMove();
         }
 
         public void DisallowMove()
         {
-
+            m_PlayerMove.DisallowMove();
         }
 
         public void Kill()
