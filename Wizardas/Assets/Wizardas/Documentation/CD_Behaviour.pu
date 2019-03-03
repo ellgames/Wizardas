@@ -1,0 +1,81 @@
+@startuml
+
+namespace EllGames.Wiz {
+  namespace DB {
+    class Skill {
+      -m_SkillName : string
+    }
+  }
+
+  namespace Actor {
+    class Status {
+      -m_WalkSpeed : float
+      -m_RunSpeed : float
+    }
+
+    class PlayerUpdater {
+      -Update()
+    }
+
+    interface IDeadWatch {
+      +IsDead() : bool
+    }
+
+    namespace PlayerBehaviour {
+      class PlayerBehaviourHandler {
+        +UseSkill(string skillName)
+        +AllowMove()
+        +DisallowMove()
+        +Kill()
+      }
+
+      class DieCommand {
+        +Execute()
+      }
+
+      class WayPointMove {
+        -m_Status : Status
+        +AllowMove()
+        +DisallowMove()
+      }
+
+      class SkillManager {
+        -CanUseSkill(string skillName)
+        +UseSkill(string skillName)
+        +Initialize()
+      }
+
+      abstract class UseSkillCommandBase {
+        -m_Skill : DB.Skill
+        -m_UsingTimeRemain : float
+        -m_CoolTimeRemain : float
+        +Initialize()
+        +Execute()
+      }
+
+      class ConcreteUseSkillCommand {
+        +Execute()
+      }
+    }
+  }
+}
+
+namespace EllGames.Wiz {
+  namespace Actor {
+    IDeadWatch <|.. Status
+    PlayerUpdater -> IDeadWatch
+    PlayerUpdater -> EllGames.Wiz.Actor.PlayerBehaviour.PlayerBehaviourHandler
+
+    namespace PlayerBehaviour {
+      PlayerBehaviourHandler -left> DieCommand
+      PlayerBehaviourHandler -> WayPointMove
+      PlayerBehaviourHandler --> SkillManager
+      UseSkillCommandBase <|.ConcreteUseSkillCommand
+      SkillManager *- UseSkillCommandBase
+      WayPointMove -up> EllGames.Wiz.Actor.Status
+      UseSkillCommandBase *-down- EllGames.Wiz.DB.Skill
+    }
+  }
+}
+
+@enduml

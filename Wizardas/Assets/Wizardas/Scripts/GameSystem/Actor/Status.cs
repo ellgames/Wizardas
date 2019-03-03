@@ -7,11 +7,15 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 
-namespace EllGames.Wiz.DB
+namespace EllGames.Wiz.GameSystem.Actor
 {
-    [CreateAssetMenu(menuName = "DB/Status", fileName = "Status")]
-    public class Status : SerializedScriptableObject
+    public class Status : SerializedMonoBehaviour, IDeadWatch
     {
+        bool IDeadWatch.IsDead()
+        {
+            return m_HP == 0;
+        }
+
         [Title("Basic")]
         [OdinSerialize] string m_ActorName = "ActorNameHere";
         public string ActorName
