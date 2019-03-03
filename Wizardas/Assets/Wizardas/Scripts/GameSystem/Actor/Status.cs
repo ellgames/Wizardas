@@ -16,6 +16,9 @@ namespace EllGames.Wiz.GameSystem.Actor
             return m_HP == 0;
         }
 
+        [Title("Required")]
+        [OdinSerialize, Required] DB.Status m_DefaultStatus;
+
         [Title("Basic")]
         [OdinSerialize] string m_ActorName = "ActorNameHere";
         public string ActorName
@@ -52,6 +55,16 @@ namespace EllGames.Wiz.GameSystem.Actor
         public float RunSpeed
         {
             get { return m_RunSpeed; }
+        }
+
+        [Button("Initialize")]
+        public void Initialize()
+        {
+            m_MaxHP = m_DefaultStatus.MaxHP;
+            m_HP = m_DefaultStatus.HP;
+            m_ATK = m_DefaultStatus.ATK;
+            m_WalkSpeed = m_DefaultStatus.WalkSpeed;
+            m_RunSpeed = m_DefaultStatus.RunSpeed;
         }
     }
 }

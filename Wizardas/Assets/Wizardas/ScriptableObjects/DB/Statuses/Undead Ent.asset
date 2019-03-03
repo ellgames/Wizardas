@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e9d99889db29fc44933935cbd28607d, type: 3}
-  m_Name: Ent
+  m_Name: Undead Ent
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,7 +23,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_ActorName
       Entry: 1
-      Data: Ent
+      Data: Undead Ent
     - Name: m_MaxHP
       Entry: 3
       Data: 1
@@ -33,3 +33,9 @@ MonoBehaviour:
     - Name: m_ATK
       Entry: 3
       Data: 80
+    - Name: m_WalkSpeed
+      Entry: 4
+      Data: 1
+    - Name: m_RunSpeed
+      Entry: 4
+      Data: 3
