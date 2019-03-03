@@ -12,10 +12,11 @@ namespace EllGames.Wiz.Config
     [CreateAssetMenu(menuName = "Config/KeyConfig", fileName = "KeyConfig")]
     public class KeyConfig : SerializedScriptableObject
     {
-        /// <summary>
-        /// 0: マウス左ボタン, 1: マウス右ボタン
-        /// </summary>
-        [OdinSerialize] public int PlayerMoveMouseButton { get; set; } = 0;
-        [OdinSerialize] public List<KeyCode> PlayerWalkTriggers = new List<KeyCode> { KeyCode.LeftShift, KeyCode.RightShift };
+        [OdinSerialize] public KeyCode MoveForwardKey { get; set; } = KeyCode.W;
+        [OdinSerialize] public KeyCode MoveLeftKey { get; set; } = KeyCode.A;
+        [OdinSerialize] public KeyCode MoveBackwardKey { get; set; } = KeyCode.S;
+        [OdinSerialize] public KeyCode MoveRightKey { get; set; } = KeyCode.D;
+        [OdinSerialize] public KeyCode JumpKey { get; set; } = KeyCode.Space;
+        [OdinSerialize] public List<KeyCode> WalkTriggers = new List<KeyCode> { KeyCode.LeftShift, KeyCode.RightShift };
     }
 }
