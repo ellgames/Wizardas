@@ -20,13 +20,13 @@ namespace EllGames.Wiz.DB
         }
 
         [Title("Spec")]
-        [OdinSerialize] int m_MaxHP = 1000;
+        [OdinSerialize] int m_MaxHP = 1;
         public int MaxHP
         {
             get { return m_MaxHP; }
         }
 
-        [OdinSerialize] int m_HP = 1000;
+        [OdinSerialize] int m_HP = 1;
         public int HP
         {
             get { return m_HP; }
@@ -36,6 +36,18 @@ namespace EllGames.Wiz.DB
         public int ATK
         {
             get { return m_ATK; }
+        }
+
+        [OdinSerialize] float m_WalkSpeed = 1f;
+        public float WalkSpeed
+        {
+            get { return m_WalkSpeed; }
+        }
+
+        [OdinSerialize] float m_RunSpeed = 3f;
+        public float RunSpeed
+        {
+            get { return m_RunSpeed; }
         }
     }
 }

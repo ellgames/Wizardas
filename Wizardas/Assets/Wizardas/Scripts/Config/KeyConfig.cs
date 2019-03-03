@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.AI;
+using UnityEngine.Events;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 
-public class KeyConfig : MonoBehaviour
+namespace EllGames.Wiz.Config
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(menuName = "Config/KeyConfig", fileName = "KeyConfig")]
+    public class KeyConfig : SerializedScriptableObject
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        /// <summary>
+        /// 0: マウス左ボタン, 1: マウス右ボタン
+        /// </summary>
+        [OdinSerialize] public int PlayerMoveMouseButton { get; set; } = 0;
+        [OdinSerialize] public List<KeyCode> PlayerWalkTriggers = new List<KeyCode> { KeyCode.LeftShift, KeyCode.RightShift };
     }
 }

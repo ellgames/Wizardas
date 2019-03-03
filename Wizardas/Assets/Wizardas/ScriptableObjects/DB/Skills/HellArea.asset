@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f446eb0ce99aac74db73024cab0a4ca1, type: 3}
+  m_Name: HellArea
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: c0947b5d16e70db45ba2d1d6f96e2d11, type: 2}
+    - {fileID: 21300000, guid: 63f46144440e4482589540de2388fc92, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: m_SystemProfile
+      Entry: 10
+      Data: 0
+    - Name: m_Icon
+      Entry: 10
+      Data: 1
+    - Name: m_SkillName_Jpn
+      Entry: 1
+      Data: "\u57FA\u672C\u653B\u6483"
+    - Name: m_SkillName_Eng
+      Entry: 1
+      Data: StandardAttack
+    - Name: m_Description_Jpn
+      Entry: 1
+      Data: 
+    - Name: m_Description_Eng
+      Entry: 6
+      Data: 
+    - Name: m_AddingDamage
+      Entry: 3
+      Data: 1
+    - Name: m_UsingTimeSec
+      Entry: 4
+      Data: 1
+    - Name: m_CoolTimeSec
+      Entry: 4
+      Data: 1
+    - Name: m_Memo
+      Entry: 6
+      Data: 

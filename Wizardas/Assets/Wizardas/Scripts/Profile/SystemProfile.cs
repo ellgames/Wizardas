@@ -19,8 +19,5 @@ namespace EllGames.Wiz.Profile
             get { return m_Language; }
             set { m_Language = value; }
         }
-
-        [Title("Save")]
-        [OdinSerialize] string m_DefaultSaveDirectory = "SaveData/";
     }
 }

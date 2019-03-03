@@ -12,6 +12,9 @@ namespace EllGames.Wiz.Profile
     [CreateAssetMenu(menuName = "Profile/ComboProfile", fileName = "ComboProfile")]
     public class ComboProfile : SerializedScriptableObject
     {
+        [Title("Required")]
+        [OdinSerialize, Required] SystemProfile m_SystemProfile;
+
         [Title("Combo")]
         [OdinSerialize] int m_ComboCount;
         public int ComboCount
@@ -35,6 +38,11 @@ namespace EllGames.Wiz.Profile
         public void SetZeroCombo()
         {
             m_ComboCount = 0;
+        }
+
+        public void ForcedSetComboCount(int value)
+        {
+            m_ComboCount = value;
         }
     }
 }
