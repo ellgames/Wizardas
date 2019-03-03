@@ -144,91 +144,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &122171444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 122171445}
-  - component: {fileID: 122171446}
-  m_Layer: 0
-  m_Name: Way Point Move
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &122171445
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122171444}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 946632005}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &122171446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122171444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c1d47d12d457b4478f8e0d6d1d68c1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 3268098841934192005}
-    - {fileID: 1315715940}
-    - {fileID: 11400000, guid: 301d81b86769e7242842a8b2eae17570, type: 2}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: m_CharacterController
-      Entry: 10
-      Data: 0
-    - Name: m_Status
-      Entry: 10
-      Data: 1
-    - Name: m_KeyConfig
-      Entry: 10
-      Data: 2
-    - Name: m_Movable
-      Entry: 5
-      Data: true
-    - Name: m_State
-      Entry: 3
-      Data: 0
-    - Name: m_StoppingDistance
-      Entry: 4
-      Data: 0.5
-    - Name: m_RaycastHitObject
-      Entry: 6
-      Data: 
-    - Name: m_RaycastHitPosition
-      Entry: 7
-      Data: System.Nullable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
 --- !u!1 &165128223
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,8 +200,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 122171445}
+  m_Children: []
   m_Father: {fileID: 1386132726}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1819,9 +1733,9 @@ MonoBehaviour:
     - {fileID: 1315715939}
     - {fileID: 1315715940}
     - {fileID: 11500000, guid: 6c1d47d12d457b4478f8e0d6d1d68c1e, type: 3}
-    - {fileID: 122171446}
-    - {fileID: 122171444}
-    - {fileID: 122171445}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 946632004}
     - {fileID: 946632005}
     - {fileID: 11500000, guid: 3377a127dbc104243910ff1133791e22, type: 3}
@@ -2902,7 +2816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
+    SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects: []
     SerializedBytesString: 
