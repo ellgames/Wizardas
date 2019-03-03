@@ -29,6 +29,9 @@ MonoBehaviour:
     - Name: m_Icon
       Entry: 10
       Data: 1
+    - Name: m_SkillIdentifier
+      Entry: 1
+      Data: HellFlameFissure
     - Name: m_SkillName_Jpn
       Entry: 1
       Data: "\u30D8\u30EB\u30D5\u30EC\u30A4\u30E0\u30D5\u30A3\u30C3\u30B7\u30E3\u30FC"

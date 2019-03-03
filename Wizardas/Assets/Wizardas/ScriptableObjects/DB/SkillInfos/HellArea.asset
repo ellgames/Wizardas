@@ -29,6 +29,9 @@ MonoBehaviour:
     - Name: m_Icon
       Entry: 10
       Data: 1
+    - Name: m_SkillIdentifier
+      Entry: 1
+      Data: HellArea
     - Name: m_SkillName_Jpn
       Entry: 1
       Data: "\u30D8\u30EB\u30A8\u30EA\u30A2"

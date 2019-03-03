@@ -9,14 +9,21 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.DB
 {
-    [CreateAssetMenu(menuName = "DB/Skill", fileName = "Skill")]
-    public class Skill : SerializedScriptableObject
+    [CreateAssetMenu(menuName = "DB/SkillInfo", fileName = "SkillInfo")]
+    public class SkillInfo : SerializedScriptableObject
     {
         [Title("Required")]
         [OdinSerialize, Required] Profile.SystemProfile m_SystemProfile;
 
         [Title("UI")]
         [OdinSerialize, PreviewField] Sprite m_Icon;
+
+        [Title("Meta")]
+        [OdinSerialize] string m_SkillIdentifier;
+        public string SkillIdentifier
+        {
+            get { return m_SkillIdentifier; }
+        }
 
         [Title("Basic")]
         [OdinSerialize] string m_SkillName_Jpn;

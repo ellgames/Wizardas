@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f446eb0ce99aac74db73024cab0a4ca1, type: 3}
-  m_Name: StandardAttack
+  m_Name: HellFire
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -29,12 +29,15 @@ MonoBehaviour:
     - Name: m_Icon
       Entry: 10
       Data: 1
+    - Name: m_SkillIdentifier
+      Entry: 1
+      Data: HellFire
     - Name: m_SkillName_Jpn
       Entry: 1
-      Data: "\u57FA\u672C\u653B\u6483"
+      Data: "\u30D8\u30EB\u30D5\u30A1\u30A4\u30A2"
     - Name: m_SkillName_Eng
       Entry: 1
-      Data: StandardAttack
+      Data: Hell Fire
     - Name: m_Description_Jpn
       Entry: 1
       Data: 
@@ -49,7 +52,7 @@ MonoBehaviour:
       Data: 1
     - Name: m_CoolTimeSec
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: m_Memo
       Entry: 6
       Data: 
