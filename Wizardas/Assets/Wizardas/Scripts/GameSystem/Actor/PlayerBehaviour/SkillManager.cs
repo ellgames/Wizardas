@@ -15,6 +15,19 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         [OdinSerialize, Required] IDeadWatch m_IDeadWatch;
         [OdinSerialize, Required] List<UseSkillCommandBase> m_UseSkillCommands = new List<UseSkillCommandBase>();
 
+        [Title("State")]
+        [OdinSerialize] bool m_SkillUseIsAllowed = true;
+
+        public void AllowSkillUse()
+        {
+            m_SkillUseIsAllowed = true;
+        }
+
+        public void DisallowSkillUse()
+        {
+            m_SkillUseIsAllowed = false;
+        }
+
         UseSkillCommandBase SearchUseSkillCommand(string skillIdentifier)
         {
             UseSkillCommandBase found = null;
@@ -31,6 +44,7 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         {
             Debug.Assert(target != null);
 
+            if (!m_SkillUseIsAllowed) return false;
             if (m_IDeadWatch.IsDead()) return false;
             if (target.UsingTimeRemain > 0f) return false;
             if (target.CoolTimeRemain > 0f) return false;

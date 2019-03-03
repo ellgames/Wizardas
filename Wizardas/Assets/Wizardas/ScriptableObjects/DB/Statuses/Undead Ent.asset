@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 6a8e81ddc622a3b4fb2e5c536a3e2499, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,3 +40,6 @@ MonoBehaviour:
     - Name: m_RunSpeed
       Entry: 4
       Data: 3
+    - Name: m_DeathVoice
+      Entry: 10
+      Data: 0
