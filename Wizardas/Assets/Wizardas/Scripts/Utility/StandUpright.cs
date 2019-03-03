@@ -13,10 +13,9 @@ namespace EllGames.Wiz.Utility
     {
         private void Update()
         {
-            var fixedRotation = transform.eulerAngles;
-            fixedRotation.x = 0f;
-            fixedRotation.z = 0f;
-            transform.eulerAngles = fixedRotation;
+            var fixedPosition = transform.position;
+            fixedPosition.y = 0f;
+            transform.position = fixedPosition;
         }
     }
 }
