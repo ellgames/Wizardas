@@ -41,5 +41,17 @@ namespace EllGames.Wiz.GameSystem.Actor
         {
             get { return m_ATK; }
         }
+
+        [OdinSerialize] float m_WalkSpeed = 1f;
+        public float WalkSpeed
+        {
+            get { return m_WalkSpeed; }
+        }
+
+        [OdinSerialize] float m_RunSpeed = 3f;
+        public float RunSpeed
+        {
+            get { return m_RunSpeed; }
+        }
     }
 }
