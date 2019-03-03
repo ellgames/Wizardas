@@ -20,7 +20,7 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         }
 
         [Title("Required")]
-        [OdinSerialize, Required] CharacterController m_CharacterController;
+        [OdinSerialize, Required] Rigidbody m_Rigidbody;
         [OdinSerialize, Required] Status m_Status;
         [OdinSerialize, Required] Config.KeyConfig m_KeyConfig;
 
@@ -71,13 +71,13 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             }
         }
 
-        Vector3 Destination() => m_RaycastHitPosition == null ? m_CharacterController.transform.position : (Vector3)m_RaycastHitPosition;
-        Vector3 MoveDirection() => (Destination().Flatten() - m_CharacterController.transform.position.Flatten()).normalized;
-        bool HasReachedDestination() => Math.HorizontalDistance(Destination(), m_CharacterController.transform.position) <= m_StoppingDistance;
+        Vector3 Destination() => m_RaycastHitPosition == null ? m_Rigidbody.transform.position : (Vector3)m_RaycastHitPosition;
+        Vector3 MoveDirection() => (Destination() - m_Rigidbody.transform.position).Flatten().normalized;
+        bool HasReachedDestination() => Math.HorizontalDistance(Destination(), m_Rigidbody.transform.position) <= m_StoppingDistance;
 
         void LookAtDestination()
         {
-            m_CharacterController.transform.LookAt(Destination().Flatten());
+            m_Rigidbody.transform.LookAt(Destination().Flatten());
         }
 
         void UpdateState()
@@ -97,23 +97,33 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             }
         }
 
-        private void FixedUpdate()
+        void UpdateVelocity()
         {
-            if (!m_Movable) return;
+            Vector3 velocity;
 
             switch (m_State)
             {
+                default:
+                    velocity = Vector3.zero;
+                    velocity.y = m_Rigidbody.velocity.y;
+                    break;
                 case STATE.Idling:
+                    velocity = Vector3.zero;
+                    velocity.y = m_Rigidbody.velocity.y;
                     break;
                 case STATE.Walking:
                     LookAtDestination();
-                    m_CharacterController.Move(MoveDirection() * m_Status.WalkSpeed);
+                    velocity = MoveDirection() * m_Status.WalkSpeed * Time.deltaTime;
+                    velocity.y = m_Rigidbody.velocity.y;
                     break;
                 case STATE.Running:
                     LookAtDestination();
-                    m_CharacterController.Move(MoveDirection() * m_Status.RunSpeed);
+                    velocity = MoveDirection() * m_Status.RunSpeed * Time.deltaTime;
+                    velocity.y = m_Rigidbody.velocity.y;
                     break;
             }
+
+            m_Rigidbody.velocity = velocity;
         }
 
         private void Update()
@@ -121,6 +131,7 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             if (!m_Movable) return;
 
             UpdateState();
+            UpdateVelocity();
 
             if (Input.GetMouseButton(m_KeyConfig.PlayerMoveMouseButton)) RayCast();
         }
