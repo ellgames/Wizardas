@@ -19,13 +19,13 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         }
 
         [Title("State")]
-        [OdinSerialize, ReadOnly] float m_UsingTimeRemain;
+        [OdinSerialize] float m_UsingTimeRemain;
         public float UsingTimeRemain
         {
             get { return m_UsingTimeRemain; }
         }
 
-        [OdinSerialize, ReadOnly] float m_CoolTimeRemain;
+        [OdinSerialize] float m_CoolTimeRemain;
         public float CoolTimeRemain
         {
             get { return m_CoolTimeRemain; }
