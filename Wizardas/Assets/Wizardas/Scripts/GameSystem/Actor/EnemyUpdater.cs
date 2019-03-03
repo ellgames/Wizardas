@@ -9,11 +9,11 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.GameSystem.Actor
 {
-    public class PlayerUpdater : SerializedMonoBehaviour
+    public class EnemyUpdater : SerializedMonoBehaviour
     {
         [Title("Required")]
         [OdinSerialize, Required] IDeadWatch m_IDeadWatch;
-        [OdinSerialize, Required] PlayerBehaviour.PlayerBehaviourHandler m_PlayerBehaviourHandler;
+        [OdinSerialize, Required] EnemyBehaviour.EnemyBehaviourHandler m_EnemyBehaviourHandler;
 
         bool m_HasKilled = false;
 
@@ -25,7 +25,7 @@ namespace EllGames.Wiz.GameSystem.Actor
             {
                 if (m_HasKilled == false)
                 {
-                    m_PlayerBehaviourHandler.Kill();
+                    m_EnemyBehaviourHandler.Kill();
                     m_HasKilled = true;
                 }
             }

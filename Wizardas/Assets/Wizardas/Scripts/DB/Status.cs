@@ -49,5 +49,12 @@ namespace EllGames.Wiz.DB
         {
             get { return m_RunSpeed; }
         }
+
+        [Title("Voice")]
+        [OdinSerialize] AudioClip m_DeathVoice;
+        public AudioClip DeathVoice
+        {
+            get { return m_DeathVoice; }
+        }
     }
 }

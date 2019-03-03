@@ -14,6 +14,7 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         [Title("Required")]
         [OdinSerialize, Required] PlayerMove m_PlayerMove;
         [OdinSerialize, Required] SkillManager m_SkillManager;
+        [OdinSerialize, Required] Die m_Die;
 
 	    public void UseSkill(string skillIdentifier)
         {
@@ -30,9 +31,21 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             m_PlayerMove.DisallowMove();
         }
 
+        public void AllowSkillUse()
+        {
+            m_SkillManager.AllowSkillUse();
+        }
+
+        public void DisallowSkillUse()
+        {
+            m_SkillManager.DisallowSkillUse();
+        }
+
         public void Kill()
         {
-
+            m_Die.gameObject.SetActive(true);
+            DisallowMove();
+            DisallowSkillUse();
         }
     }
 }
