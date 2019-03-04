@@ -46,6 +46,7 @@ namespace EllGames.Wiz.GameSystem.Actor.AI
             if (m_AttackCoolTimeDuration <= 0f) m_AttackCoolTimeDuration = 0f;
 
             m_EnemyBehaviourHandler.SetChased(m_Chased);
+            m_EnemyBehaviourHandler.SetLookedAt(m_Chased);
 
             if (m_Chased == null) return;
 
