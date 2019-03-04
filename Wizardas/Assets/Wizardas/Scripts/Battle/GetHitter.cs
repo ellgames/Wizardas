@@ -9,7 +9,7 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.Battle
 {
-    public class GetHitArea : SerializedMonoBehaviour
+    public class GetHitter : SerializedMonoBehaviour
     {
         [Title("Required")]
         [OdinSerialize, Required] IApplyDamage m_IApplyDamage;
@@ -46,6 +46,21 @@ namespace EllGames.Wiz.Battle
 
             m_SEPlayer.PlayOneShot(hitSE, volumeScale);
             GetHit(damage, hitParticle);
+        }
+
+        public void GetHit(GameSystem.Actor.Status attackerStatus)
+        {
+            GetHit(attackerStatus.ATK);
+        }
+
+        public void GetHit(GameSystem.Actor.Status attackerStatus, GameObject hitParticle = null)
+        {
+            GetHit(attackerStatus.ATK, hitParticle);
+        }
+
+        public void GetHit(GameSystem.Actor.Status attackerStatus, AudioClip hitSE, float volumeScale = 0.8f, GameObject hitParticle = null)
+        {
+            GetHit(attackerStatus.ATK, hitSE, volumeScale, hitParticle);
         }
     }
 }

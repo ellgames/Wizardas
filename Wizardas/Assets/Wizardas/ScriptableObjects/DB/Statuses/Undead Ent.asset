@@ -43,3 +43,6 @@ MonoBehaviour:
     - Name: m_DeathVoice
       Entry: 10
       Data: 0
+    - Name: m_StoppingDistance
+      Entry: 4
+      Data: 2.5

@@ -17,6 +17,11 @@ namespace EllGames.Wiz.GameSystem.Actor.EnemyBehaviour
         [OdinSerialize, Required] Die m_Die;
         [OdinSerialize, Required] LookAtPlayer m_LookAtPlayer;
 
+        public void SetChased(Transform chased)
+        {
+            m_Chase.Target = chased;
+        }
+
         [Button("Allow Move")]
         public void AllowMove()
         {
@@ -43,6 +48,7 @@ namespace EllGames.Wiz.GameSystem.Actor.EnemyBehaviour
         public void LookAtPlayer()
         {
             if (m_Die.gameObject.activeSelf) return;
+            if (m_Attack.gameObject.activeSelf) return;
             m_LookAtPlayer.Activate();
         }
 

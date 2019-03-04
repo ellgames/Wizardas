@@ -51,12 +51,6 @@ namespace EllGames.Wiz.DB
         }
 
         [Title("Spec")]
-        [OdinSerialize] int m_AddingDamage = 0;
-        public int AddingDamage
-        {
-            get { return m_AddingDamage; }
-        }
-
         [OdinSerialize] float m_UsingTimeSec = 0f;
         public float UsingTimeSec
         {
