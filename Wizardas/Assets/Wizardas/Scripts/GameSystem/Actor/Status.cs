@@ -9,8 +9,13 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.GameSystem.Actor
 {
-    public class Status : SerializedMonoBehaviour, IDeadWatch
+    public class Status : SerializedMonoBehaviour, IDeadWatch, Battle.IApplyDamage
     {
+        void Battle.IApplyDamage.ApplyDamage(int damage)
+        {
+            DecreaseHP(damage);
+        }
+
         bool IDeadWatch.IsDead()
         {
             return m_HP == 0;
@@ -65,6 +70,12 @@ namespace EllGames.Wiz.GameSystem.Actor
             m_ATK = m_DefaultStatus.ATK;
             m_WalkSpeed = m_DefaultStatus.WalkSpeed;
             m_RunSpeed = m_DefaultStatus.RunSpeed;
+        }
+
+        public void DecreaseHP(int amount)
+        {
+            if (m_HP - amount > 0) m_HP -= amount;
+            else m_HP = 0;
         }
     }
 }
