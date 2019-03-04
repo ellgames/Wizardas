@@ -20,6 +20,12 @@ namespace EllGames.Wiz.GameSystem.Actor
 
         bool m_HasKilled = false;
 
+        [Button("Force Update")]
+        void ForceUpdate()
+        {
+            Update();
+        }
+
         private void Update()
         {
             Debug.Assert(m_NavMeshAgent != null);

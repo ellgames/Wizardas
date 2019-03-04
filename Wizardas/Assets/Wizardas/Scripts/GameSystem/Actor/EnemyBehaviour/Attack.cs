@@ -11,11 +11,35 @@ namespace EllGames.Wiz.GameSystem.Actor.EnemyBehaviour
 {
     public class Attack : EnemyBehaviourBase
     {
+        [Title("Required")]
+        [OdinSerialize, Required] Status m_Status;
+        [OdinSerialize, Required] Battle.AttackArea m_AttackArea;
+
+        [Title("Settings")]
+        [OdinSerialize] float m_HitDelay;
+
+        [Title("Particle")]
+        [OdinSerialize] GameObject m_HitParticle;
+
+        [Title("Animation")]
+        [OdinSerialize] Animator m_Animator;
+        [OdinSerialize] string m_AnimationName;
+
+        [Title("SE")]
+        [OdinSerialize] Audio.SEPlayer m_SEPlayer;
+        [OdinSerialize] AudioClip m_HitAudioClip;
+        [OdinSerialize] float m_HitVolumeScale = 0.8f;
+
+
         protected override void OnEnable()
         {
             base.OnEnable();
 
-            Debug.Log("Enemy Attacked");
+            m_Animator.SetTrigger(m_AnimationName);
+            StartCoroutine(DelayedRun(() => m_AttackArea.Contents.ForEach(content =>
+            {
+                content.GetHit(m_Status, m_HitAudioClip, m_HitVolumeScale, m_HitParticle);
+            }), m_HitDelay));
         }
 
         protected override void OnDisable()
@@ -26,6 +50,13 @@ namespace EllGames.Wiz.GameSystem.Actor.EnemyBehaviour
         protected override void Update()
         {
             base.Update();
+        }
+
+        IEnumerator DelayedRun(System.Action action, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+
+            action.Invoke();
         }
     }
 }
