@@ -18,5 +18,9 @@ namespace EllGames.Wiz.Config
         [OdinSerialize] public KeyCode MoveRightKey { get; set; } = KeyCode.D;
         [OdinSerialize] public KeyCode JumpKey { get; set; } = KeyCode.Space;
         [OdinSerialize] public List<KeyCode> WalkTriggers = new List<KeyCode> { KeyCode.LeftShift, KeyCode.RightShift };
+        [OdinSerialize] public KeyCode Skill1Key { get; set; } = KeyCode.I;
+        [OdinSerialize] public KeyCode Skill2Key { get; set; } = KeyCode.J;
+        [OdinSerialize] public KeyCode Skill3Key { get; set; } = KeyCode.K;
+        [OdinSerialize] public KeyCode Skill4Key { get; set; } = KeyCode.L;
     }
 }

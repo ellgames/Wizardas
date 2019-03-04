@@ -39,3 +39,6 @@ MonoBehaviour:
     - Name: m_RunSpeed
       Entry: 4
       Data: 800
+    - Name: m_DeathVoice
+      Entry: 6
+      Data: 

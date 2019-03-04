@@ -14,13 +14,21 @@ namespace EllGames.Wiz.InputManagement
         [Title("Required")]
         [OdinSerialize, Required] Config.KeyConfig m_KeyConfig;
         [OdinSerialize, Required] GameSystem.Actor.PlayerBehaviour.PlayerBehaviourHandler m_PlayerBehaviourHandler;
-        [OdinSerialize, Required] DB.SkillInfo m_SkillInfo_Jump;
+
+        [Title("Skill Infos")]
+        [OdinSerialize] DB.SkillInfo m_SkillInfo_Jump;
+        [OdinSerialize] DB.SkillInfo m_SkillInfo_StandardAttack;
 
         private void Update()
         {
             if (Input.GetKeyDown(m_KeyConfig.JumpKey))
             {
                 m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_Jump.SkillIdentifier);
+            }
+
+            if (Input.GetKeyDown(m_KeyConfig.Skill1Key))
+            {
+                m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_StandardAttack.SkillIdentifier);
             }
         }
     }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GetHitArea_Enemy
+  - GetHitArea_Player
   layers:
   - Default
   - TransparentFX

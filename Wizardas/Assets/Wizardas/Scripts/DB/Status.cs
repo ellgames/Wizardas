@@ -56,5 +56,18 @@ namespace EllGames.Wiz.DB
         {
             get { return m_DeathVoice; }
         }
+
+        [Title("Auto")]
+        [OdinSerialize] float m_StoppingDistance = 3f;
+        public float StoppingDistance
+        {
+            get { return m_StoppingDistance; }
+        }
+
+        [OdinSerialize] float m_AttackDistance = 3f;
+        public float AttackDistance
+        {
+            get { return m_AttackDistance; }
+        }
     }
 }
