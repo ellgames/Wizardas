@@ -9,7 +9,7 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.Battle
 {
-    public class GetHitArea : SerializedMonoBehaviour
+    public class GetHitter : SerializedMonoBehaviour
     {
         [Title("Required")]
         [OdinSerialize, Required] IApplyDamage m_IApplyDamage;
