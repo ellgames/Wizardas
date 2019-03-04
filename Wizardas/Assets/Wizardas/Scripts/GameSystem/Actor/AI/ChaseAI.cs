@@ -20,11 +20,14 @@ namespace EllGames.Wiz.GameSystem.Actor.AI
         [OdinSerialize, DisableIf("m_AutoFindOnEnable")] Transform m_Chased;
 
         [Title("Settings")]
+        [OdinSerialize] float m_AttackCoolTime = 1f;
         [OdinSerialize] float m_AttackDistance = 2.5f;
         public float AttackDistance
         {
             set { m_AttackDistance = value; }
         }
+
+        float m_AttackCoolTimeDuration;
 
         [Button("Find Chased")]
         void FindChased()
@@ -39,15 +42,26 @@ namespace EllGames.Wiz.GameSystem.Actor.AI
 
         private void Update()
         {
+            m_AttackCoolTimeDuration -= Time.deltaTime;
+            if (m_AttackCoolTimeDuration <= 0f) m_AttackCoolTimeDuration = 0f;
+
             m_EnemyBehaviourHandler.SetChased(m_Chased);
 
             if (m_Chased == null) return;
 
             if (Vector3.Distance(transform.position, m_Chased.position) <= m_AttackDistance)
             {
-                m_EnemyBehaviourHandler.DisallowMove();
-                m_EnemyBehaviourHandler.LookAtPlayer();
-                m_EnemyBehaviourHandler.Attack();
+                if (m_AttackCoolTimeDuration == 0f)
+                {
+                    m_EnemyBehaviourHandler.LookAtPlayer();
+                    m_EnemyBehaviourHandler.DisallowMove();
+                    m_EnemyBehaviourHandler.Attack();
+                    m_AttackCoolTimeDuration = m_AttackCoolTime;
+                }
+                else
+                {
+                    m_EnemyBehaviourHandler.LookAtPlayer();
+                }
             }
             else
             {
