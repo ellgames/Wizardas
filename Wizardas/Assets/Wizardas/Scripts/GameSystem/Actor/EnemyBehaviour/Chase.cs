@@ -13,7 +13,13 @@ namespace EllGames.Wiz.GameSystem.Actor.EnemyBehaviour
     {
         [Title("Required")]
         [OdinSerialize, Required] NavMeshAgent m_NavMeshAgent;
-        [OdinSerialize, Required] Transform m_Target;
+
+        [Title("Settings")]
+        [OdinSerialize] Transform m_Target;
+        public Transform Target
+        {
+            set { m_Target = value; }
+        }
 
         [Title("Animation")]
         [OdinSerialize, Required] Animator m_Animator;
@@ -22,23 +28,30 @@ namespace EllGames.Wiz.GameSystem.Actor.EnemyBehaviour
         protected override void OnEnable()
         {
             base.OnEnable();
-
-            m_Animator.SetBool(m_ChaseAnimationName, true);
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
 
-            m_NavMeshAgent.destination = transform.position;
             m_Animator.SetBool(m_ChaseAnimationName, false);
+            m_NavMeshAgent.destination = m_NavMeshAgent.transform.position;
         }
 
         protected override void Update()
         {
             base.Update();
 
-            m_NavMeshAgent.destination = m_Target.position;
+            if (m_Target != null)
+            {
+                m_NavMeshAgent.destination = m_Target.position;
+                m_Animator.SetBool(m_ChaseAnimationName, true);
+            }
+            else
+            {
+                m_NavMeshAgent.destination = m_NavMeshAgent.transform.position;
+                m_Animator.SetBool(m_ChaseAnimationName, false);
+            }
         }
     }
 }

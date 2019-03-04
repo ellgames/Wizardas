@@ -25,7 +25,7 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 
         private void OnEnable()
         {
-            m_OnDiedDelayed.Invoke();
+            m_OnDied.Invoke();
             StartCoroutine(DelayedRun(m_Delay, () => m_OnDiedDelayed.Invoke()));
 
             m_Animator.SetBool(m_DieAnimationName, true);
