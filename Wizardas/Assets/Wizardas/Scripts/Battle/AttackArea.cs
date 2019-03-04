@@ -49,11 +49,17 @@ namespace EllGames.Wiz.Battle
         {
             if (m_Contents == null) return;
 
-            // InvalidOperationExceptionが発生する
-            Debug.Log("FIX ME!!");
+            // InvalidOperationExceptionを回避するため、二段階に分けて削除
+            var removables = new List<GetHitter>();
+
             m_Contents.ForEach(content =>
             {
-                if (content == null) m_Contents.Remove(content);
+                if (content == null) removables.Add(content);
+            });
+
+            removables.ForEach(removable =>
+            {
+                m_Contents.Remove(removable);
             });
         }
     }

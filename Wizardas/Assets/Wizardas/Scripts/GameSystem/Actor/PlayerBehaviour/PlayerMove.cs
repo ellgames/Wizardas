@@ -133,7 +133,9 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             int pressedMoveKeysCount = 0;
             float sumOfAngles = 0f;
 
-            // 前方移動と左方移動のみが入力されている場合は、0度を360度として演算する必要があるため処理を分岐します
+            /* 以下の場合、0度を360度として演算する必要があるため処理を分岐します
+             * ・前方移動と左方移動のみが入力されている場合
+             * ・前方移動と左方移動と後方移動のみが入力されている場合 */
             if (Input.GetKey(m_KeyConfig.MoveForwardKey) && Input.GetKey(m_KeyConfig.MoveLeftKey) && !Input.GetKey(m_KeyConfig.MoveBackwardKey) && !Input.GetKey(m_KeyConfig.MoveRightKey))
             {
                 // 前方移動の分
@@ -142,6 +144,20 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 
                 // 左方移動の分
                 sumOfAngles += LeftAngle();
+                pressedMoveKeysCount++;
+            }
+            else if (Input.GetKey(m_KeyConfig.MoveForwardKey) && Input.GetKey(m_KeyConfig.MoveLeftKey) && Input.GetKey(m_KeyConfig.MoveBackwardKey) && !Input.GetKey(m_KeyConfig.MoveRightKey))
+            {
+                // 前方移動の分
+                sumOfAngles += 360f;
+                pressedMoveKeysCount++;
+
+                // 左方移動の分
+                sumOfAngles += LeftAngle();
+                pressedMoveKeysCount++;
+
+                // 後方移動の分
+                sumOfAngles += BackwardAngle();
                 pressedMoveKeysCount++;
             }
             else
