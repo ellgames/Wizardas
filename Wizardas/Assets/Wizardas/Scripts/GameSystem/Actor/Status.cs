@@ -9,8 +9,23 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.GameSystem.Actor
 {
-    public class Status : SerializedMonoBehaviour, IDeadWatch, Battle.IApplyDamage
+    public class Status : SerializedMonoBehaviour, IDeadWatch, Battle.IApplyDamage, UI.Hud.IHPWatch, GameSystem.Score.IKillPoint
     {
+        int Score.IKillPoint.KillPoint()
+        {
+            return m_DefaultStatus.KillPoint;
+        }
+
+        int UI.Hud.IHPWatch.MaxHP()
+        {
+            return m_MaxHP;
+        }
+
+        int UI.Hud.IHPWatch.HP()
+        {
+            return m_HP;
+        }
+
         void Battle.IApplyDamage.ApplyDamage(int damage)
         {
             DecreaseHP(damage);
@@ -62,6 +77,25 @@ namespace EllGames.Wiz.GameSystem.Actor
             get { return m_RunSpeed; }
         }
 
+        [Title("State")]
+        [OdinSerialize, ReadOnly] bool m_Invincible = false;
+        public bool Invincible
+        {
+            get { return m_Invincible; }
+        }
+
+        [Button("無敵化")]
+        public void 無敵化()
+        {
+            m_Invincible = true;
+        }
+
+        [Button("無敵状態を解除")]
+        public void 無敵状態を解除()
+        {
+            m_Invincible = false;
+        }
+
         [Button("Initialize")]
         public void Initialize()
         {
@@ -74,6 +108,8 @@ namespace EllGames.Wiz.GameSystem.Actor
 
         public void DecreaseHP(int amount)
         {
+            if (m_Invincible) return;
+
             if (m_HP - amount > 0) m_HP -= amount;
             else m_HP = 0;
         }

@@ -1727,8 +1727,6 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 4190905860917134250}
-    timestamp: 636873581214888240
   - gameObject: {fileID: 4190905860917102654}
     timestamp: 636873581218827723
   - gameObject: {fileID: 4190905860917124238}
@@ -1747,6 +1745,8 @@ MonoBehaviour:
     timestamp: 636873581267654147
   - gameObject: {fileID: 4190905860917223292}
     timestamp: 636873581273420393
+  - gameObject: {fileID: 1594941644}
+    timestamp: 636874621783364726
 --- !u!4 &1195533884
 Transform:
   m_ObjectHideFlags: 17

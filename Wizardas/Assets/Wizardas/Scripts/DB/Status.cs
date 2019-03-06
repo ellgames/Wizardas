@@ -69,5 +69,12 @@ namespace EllGames.Wiz.DB
         {
             get { return m_AttackDistance; }
         }
+
+        [Title("Reward")]
+        [OdinSerialize] int m_KillPoint;
+        public int KillPoint
+        {
+            get { return m_KillPoint; }
+        }
     }
 }

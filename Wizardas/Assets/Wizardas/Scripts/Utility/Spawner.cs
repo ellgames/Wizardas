@@ -27,6 +27,7 @@ namespace EllGames.Wiz.Utility
             var spawned = Instantiate(m_Spawnables[index]);
             spawned.transform.parent = m_SpawnRoot.transform;
             spawned.transform.position = transform.position;
+            if (m_ActivateOnSpawn) spawned.gameObject.SetActive(true);
         }
 
         private void Update()
