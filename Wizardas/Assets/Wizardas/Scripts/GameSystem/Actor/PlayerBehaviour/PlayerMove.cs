@@ -80,6 +80,13 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             }
         }
 
+        public Vector3 Velocity()
+        {
+            var velocity = MoveDirection() * MoveSpeed();   // Rigidbody.velocityはフレームなどに依存しないので、Time.deltaTimeを掛ける必要なはない
+            velocity.y = m_Rigidbody.velocity.y;
+            return velocity;
+        }
+
         #endregion
 
         [Button("Allow Move")]
@@ -121,9 +128,7 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 
         void UpdateVelocity()
         {
-            Vector3 velocity = MoveDirection() * MoveSpeed() * Time.deltaTime;
-            velocity.y = m_Rigidbody.velocity.y;
-            m_Rigidbody.velocity = velocity;
+            m_Rigidbody.velocity = Velocity();
         }
 
         void UpdateEulerAngles()
