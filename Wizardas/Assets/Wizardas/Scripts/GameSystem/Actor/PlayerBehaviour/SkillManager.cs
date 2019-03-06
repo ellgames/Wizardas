@@ -46,8 +46,12 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 
             if (!m_SkillUseIsAllowed) return false;
             if (m_IDeadWatch.IsDead()) return false;
-            if (target.UsingTimeRemain > 0f) return false;
             if (target.CoolTimeRemain > 0f) return false;
+
+            foreach (UseSkillCommandBase command in m_UseSkillCommands)
+            {
+                if (command.UsingTimeRemain > 0f) return false;
+            }
 
             return true;
         }

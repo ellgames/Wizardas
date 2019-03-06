@@ -44,9 +44,6 @@ MonoBehaviour:
     - Name: m_Description_Eng
       Entry: 6
       Data: 
-    - Name: m_AddingDamage
-      Entry: 3
-      Data: 1
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 1
