@@ -18,5 +18,16 @@ namespace EllGames.Wiz.Profile
             get { return m_Score; }
             set { m_Score = value; }
         }
+
+        [Button("Initialize")]
+        public void Initialize()
+        {
+            m_Score = 0;
+        }
+
+        public void AddScore(int score)
+        {
+            m_Score += score;
+        }
     }
 }

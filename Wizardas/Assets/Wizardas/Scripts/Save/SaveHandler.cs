@@ -13,7 +13,7 @@ namespace EllGames.Wiz.Save
     public class SaveHandler : SerializedScriptableObject
     {
         [Title("Required")]
-        [OdinSerialize, Required] Profile.ComboProfile m_ComboProfile;
+        [OdinSerialize, Required] Profile.HitProfile m_HitProfile;
         [OdinSerialize, Required] Profile.SystemProfile m_SystemProfile;
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_IM;
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_MA;
@@ -22,7 +22,7 @@ namespace EllGames.Wiz.Save
 
         [Title("Path")]
         [OdinSerialize] string m_DefaultSaveDirectory = "SaveData/";
-        [OdinSerialize] string m_SaveFileName_ComboCount = "ComboCount";
+        [OdinSerialize] string m_SaveFileName_HitCount = "HitCount";
         [OdinSerialize] string m_SaveFileName_Language = "Language";
         [OdinSerialize] string m_SaveFileName_Highscore_LF_IM = "Highscore/LF/IM";
         [OdinSerialize] string m_SaveFileName_Highscore_LF_MA = "Highscore/LF/MA";
@@ -35,7 +35,7 @@ namespace EllGames.Wiz.Save
 #if UNITY_EDITOR
             Debug.Log("Saved.");
 #endif
-            ES2.Save(m_ComboProfile.ComboCount, m_DefaultSaveDirectory + m_SaveFileName_ComboCount);
+            ES2.Save(m_HitProfile.HitCount, m_DefaultSaveDirectory + m_SaveFileName_HitCount);
             ES2.Save(m_SystemProfile.Language, m_DefaultSaveDirectory + m_SaveFileName_Language);
             ES2.Save(m_HighScoreProfile_LF_IM.Score, m_DefaultSaveDirectory + m_SaveFileName_Highscore_LF_IM);
             ES2.Save(m_HighScoreProfile_LF_MA.Score, m_DefaultSaveDirectory + m_SaveFileName_Highscore_LF_MA);
@@ -49,7 +49,7 @@ namespace EllGames.Wiz.Save
 #if UNITY_EDITOR
             Debug.Log("Loaded.");
 #endif
-            m_ComboProfile.ForcedSetComboCount(ES2.Load<int>(m_DefaultSaveDirectory + m_SaveFileName_ComboCount));
+            m_HitProfile.ForcedSetHitCount(ES2.Load<int>(m_DefaultSaveDirectory + m_SaveFileName_HitCount));
             m_SystemProfile.Language = ES2.Load<Meta.LANGUAGE>(m_DefaultSaveDirectory + m_SaveFileName_Language);
             m_HighScoreProfile_LF_IM.Score = ES2.Load<int>(m_DefaultSaveDirectory + m_SaveFileName_Highscore_LF_IM);
             m_HighScoreProfile_LF_MA.Score = ES2.Load<int>(m_DefaultSaveDirectory + m_SaveFileName_Highscore_LF_MA);
