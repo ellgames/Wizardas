@@ -40,10 +40,10 @@ MonoBehaviour:
       Data: StandardAttack
     - Name: m_Description_Jpn
       Entry: 1
-      Data: 
+      Data: "\u6756\u3092\u920D\u5668\u306E\u3088\u3046\u306B\u632F\u308A\u4E0B\u308D\u3059"
     - Name: m_Description_Eng
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: The standard attack.
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 1

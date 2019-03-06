@@ -9,8 +9,18 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 {
-    public abstract class UseSkillCommandBase : SerializedMonoBehaviour
+    public abstract class UseSkillCommandBase : SerializedMonoBehaviour, UI.ICoolTimeWatch
     {
+        float UI.ICoolTimeWatch.CoolTime()
+        {
+            return m_SkillInfo.CoolTimeSec;
+        }
+
+        float UI.ICoolTimeWatch.CoolTimeRemain()
+        {
+            return m_CoolTimeRemain;
+        }
+
         [Title("Required")]
         [OdinSerialize, Required] DB.SkillInfo m_SkillInfo;
         public DB.SkillInfo SkillInfo

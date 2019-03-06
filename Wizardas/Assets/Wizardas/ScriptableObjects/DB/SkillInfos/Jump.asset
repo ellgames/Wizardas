@@ -40,13 +40,10 @@ MonoBehaviour:
       Data: High Jump
     - Name: m_Description_Jpn
       Entry: 1
-      Data: 
+      Data: "\u9B54\u5C0E\u306E\u529B\u3067\u7A7A\u9AD8\u304F\u30B8\u30E3\u30F3\u30D7\u3059\u308B"
     - Name: m_Description_Eng
-      Entry: 6
-      Data: 
-    - Name: m_AddingDamage
-      Entry: 3
-      Data: 0
+      Entry: 1
+      Data: Description text here.
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 0

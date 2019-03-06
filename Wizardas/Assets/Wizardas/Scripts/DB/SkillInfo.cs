@@ -10,8 +10,33 @@ using Sirenix.Serialization;
 namespace EllGames.Wiz.DB
 {
     [CreateAssetMenu(menuName = "DB/SkillInfo", fileName = "SkillInfo")]
-    public class SkillInfo : SerializedScriptableObject
+    public class SkillInfo : SerializedScriptableObject, UI.ISkillInfoWatch
     {
+        Sprite UI.ISkillInfoWatch.SkillIcon()
+        {
+            return m_Icon;
+        }
+
+        float UI.ISkillInfoWatch.UsingTime()
+        {
+            return m_UsingTimeSec;
+        }
+
+        float UI.ISkillInfoWatch.CoolTime()
+        {
+            return m_CoolTimeSec;
+        }
+
+        string UI.ISkillInfoWatch.Description()
+        {
+            return Description();
+        }
+
+        string UI.ISkillInfoWatch.SkillName()
+        {
+            return SkillName();
+        }
+
         [Title("Required")]
         [OdinSerialize, Required] Profile.SystemProfile m_SystemProfile;
 
@@ -73,6 +98,19 @@ namespace EllGames.Wiz.DB
                     return m_SkillName_Jpn;
                 case Meta.LANGUAGE.English:
                     return m_SkillName_Eng;
+            }
+        }
+
+        public string Description()
+        {
+            switch (m_SystemProfile.Language)
+            {
+                default:
+                    return null;
+                case Meta.LANGUAGE.Japanese:
+                    return m_Description_Jpn;
+                case Meta.LANGUAGE.English:
+                    return m_Description_Eng;
             }
         }
 
