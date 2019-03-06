@@ -20,27 +20,33 @@ namespace EllGames.Wiz.InputManagement
         [OdinSerialize] DB.SkillInfo m_SkillInfo_StandardAttack;
         [OdinSerialize] DB.SkillInfo m_SkillInfo_HellFire;
         [OdinSerialize] DB.SkillInfo m_SkillInfo_HellFlameFissure;
+        [OdinSerialize] DB.SkillInfo m_SkillInfo_HellArea;
 
         private void Update()
         {
-            if (Input.GetKeyDown(m_KeyConfig.JumpKey))
+            if (Input.GetKey(m_KeyConfig.JumpKey))
             {
                 m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_Jump.SkillIdentifier);
             }
 
-            if (Input.GetKeyDown(m_KeyConfig.Skill1Key))
+            if (Input.GetKey(m_KeyConfig.Skill1Key))
             {
                 m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_StandardAttack.SkillIdentifier);
             }
 
-            if (Input.GetKeyDown(m_KeyConfig.Skill2Key))
+            if (Input.GetKey(m_KeyConfig.Skill2Key))
             {
                 m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_HellFire.SkillIdentifier);
             }
 
-            if (Input.GetKeyDown(m_KeyConfig.Skill3Key))
+            if (Input.GetKey(m_KeyConfig.Skill3Key))
             {
                 m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_HellFlameFissure.SkillIdentifier);
+            }
+
+            if (Input.GetKey(m_KeyConfig.Skill4Key))
+            {
+                m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_HellArea.SkillIdentifier);
             }
         }
     }

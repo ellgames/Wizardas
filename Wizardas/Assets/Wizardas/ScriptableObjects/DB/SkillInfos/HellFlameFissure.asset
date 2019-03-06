@@ -49,7 +49,7 @@ MonoBehaviour:
       Data: 1
     - Name: m_CoolTimeSec
       Entry: 4
-      Data: 2
+      Data: 7
     - Name: m_Memo
       Entry: 6
       Data: 
