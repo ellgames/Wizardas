@@ -10,7 +10,7 @@ using Sirenix.Serialization;
 namespace EllGames.Wiz.UI.Hud
 {
     [RequireComponent(typeof(Text))]
-    public class HudPlayerNameText : SerializedMonoBehaviour
+    public class HudPlayerNameText : HudComponent
     {
         [Title("Required")]
         [OdinSerialize, Required] Profile.PlayerProfile m_PlayerProfile;
