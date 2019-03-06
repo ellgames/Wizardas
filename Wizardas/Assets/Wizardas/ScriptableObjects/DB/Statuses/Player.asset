@@ -35,10 +35,19 @@ MonoBehaviour:
       Data: 1
     - Name: m_WalkSpeed
       Entry: 4
-      Data: 300
+      Data: 6
     - Name: m_RunSpeed
       Entry: 4
-      Data: 800
+      Data: 12
     - Name: m_DeathVoice
       Entry: 6
       Data: 
+    - Name: m_StoppingDistance
+      Entry: 4
+      Data: 3
+    - Name: m_AttackDistance
+      Entry: 4
+      Data: 3
+    - Name: m_KillPoint
+      Entry: 3
+      Data: 0
