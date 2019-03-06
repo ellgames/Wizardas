@@ -16,8 +16,10 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         [OdinSerialize, Required] Status m_Status;
 
         [Title("Settings")]
-        [OdinSerialize] List<float> m_HitDelaySecs = new List<float>();
+        [OdinSerialize] bool m_FitRotationWithParent = true;
         [OdinSerialize] float m_Duration = 3f;
+        [OdinSerialize] List<float> m_HitDelaySecs = new List<float>();
+        [OdinSerialize] float m_EffectOffsetY = 0.1f;
 
         [Title("Particle")]
         [OdinSerialize] GameObject m_EffectParticle;
@@ -34,8 +36,10 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             m_HitDelaySecs.ForEach(delay => StartCoroutine(DelayedHit(delay)));
 
             var effect = Instantiate(m_EffectParticle);
+            if (m_FitRotationWithParent) effect.transform.rotation = transform.rotation;
             effect.transform.parent = gameObject.transform;
             effect.transform.position = transform.position;
+            effect.transform.position += new Vector3(0f, m_EffectOffsetY, 0f);
 
             StartCoroutine(DelayedDestroy(m_Duration));
         }

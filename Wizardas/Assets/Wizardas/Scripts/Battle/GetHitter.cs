@@ -28,9 +28,7 @@ namespace EllGames.Wiz.Battle
 
         public void GetHit(int damage, GameObject hitParticle = null)
         {
-            Debug.Assert(m_HitParticlePoint != null);
-
-            if (hitParticle != null)
+            if (hitParticle != null && m_HitParticlePoint != null)
             {
                 var particle = Instantiate(hitParticle);
                 particle.transform.parent = null;
