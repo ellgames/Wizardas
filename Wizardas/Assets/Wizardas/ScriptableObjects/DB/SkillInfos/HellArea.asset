@@ -44,15 +44,12 @@ MonoBehaviour:
     - Name: m_Description_Eng
       Entry: 6
       Data: 
-    - Name: m_AddingDamage
-      Entry: 3
-      Data: 1
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 1
     - Name: m_CoolTimeSec
       Entry: 4
-      Data: 10
+      Data: 2
     - Name: m_Memo
       Entry: 6
       Data: 
