@@ -47,6 +47,10 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         [OdinSerialize] float m_TrailDuration = 0.6f;
         [OdinSerialize] float m_TrailFadeTime = 0.3f;
 
+        [Title("Mesh Effect")]
+        [OdinSerialize] float m_MeshEffectDuration;
+        [OdinSerialize] GameObject m_MeshEffect;
+
         void GenerateEffect()
         {
             var effect = Instantiate(m_EffectParticle);
@@ -89,6 +93,10 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             Debug.Assert(m_XweaponTrail2 != null);
             m_XweaponTrail2.Activate();
             StartCoroutine(DelayedRun(m_TrailDuration, () => m_XweaponTrail2.StopSmoothly(m_TrailFadeTime)));
+
+            Debug.Assert(m_MeshEffect != null);
+            m_MeshEffect.gameObject.SetActive(true);
+            StartCoroutine(DelayedRun(m_MeshEffectDuration, () => m_MeshEffect.gameObject.SetActive(false)));
         }
 
         IEnumerator DelayedRun(float delay, System.Action action)
