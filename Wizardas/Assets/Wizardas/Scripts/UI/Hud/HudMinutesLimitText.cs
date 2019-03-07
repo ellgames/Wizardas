@@ -27,7 +27,7 @@ namespace EllGames.Wiz.UI.Hud
             Debug.Assert(m_Text != null);
             Debug.Assert(m_Timer != null);
 
-            m_Text.text = m_Timer.Minutes.ToString();
+            m_Text.text = m_Timer.Minutes.ToString() + "m";
         }
     }
 }

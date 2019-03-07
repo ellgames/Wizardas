@@ -18,12 +18,19 @@ namespace EllGames.Wiz.Battle
         [OdinSerialize] Transform m_HitParticlePoint;
         [OdinSerialize] Audio.SEPlayer m_SEPlayer;
 
+        [Title("Animation")]
+        [OdinSerialize] bool m_UsingGetHitAnimation = false;
+        [OdinSerialize, EnableIf("m_UsingGetHitAnimation")] Animator m_Animator;
+        [OdinSerialize, EnableIf("m_UsingGetHitAnimation")] string m_GetHitAnimationName;
+
         [Button("Get Hit (Damage Only)")]
         public void GetHit(int damage)
         {
             Debug.Assert(m_IApplyDamage != null);
 
             m_IApplyDamage.ApplyDamage(damage);
+
+            if (m_UsingGetHitAnimation) m_Animator.SetTrigger(m_GetHitAnimationName);
         }
 
         public void GetHit(int damage, GameObject hitParticle = null)

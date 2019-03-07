@@ -30,7 +30,7 @@ MonoBehaviour:
       Data: 1
     - Name: m_HP
       Entry: 3
-      Data: 3
+      Data: 5
     - Name: m_ATK
       Entry: 3
       Data: 100
