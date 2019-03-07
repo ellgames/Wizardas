@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9d99889db29fc44933935cbd28607d, type: 3}
+  m_Name: Ghoul
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 44d980eea1bba1a439e53ddd8432807f, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: m_ActorName
+      Entry: 1
+      Data: Ghoul
+    - Name: m_MaxHP
+      Entry: 3
+      Data: 1
+    - Name: m_HP
+      Entry: 3
+      Data: 1
+    - Name: m_ATK
+      Entry: 3
+      Data: 20
+    - Name: m_WalkSpeed
+      Entry: 4
+      Data: 1
+    - Name: m_RunSpeed
+      Entry: 4
+      Data: 4
+    - Name: m_DeathVoice
+      Entry: 10
+      Data: 0
+    - Name: m_StoppingDistance
+      Entry: 4
+      Data: 2.5
+    - Name: m_AttackDistance
+      Entry: 4
+      Data: 2.5
+    - Name: m_KillPoint
+      Entry: 3
+      Data: 70
