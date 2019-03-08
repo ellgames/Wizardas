@@ -39,6 +39,9 @@ namespace EllGames.Wiz.GameSystem.Actor
         [Title("Required")]
         [OdinSerialize, Required] DB.Status m_DefaultStatus;
 
+        [Title("Settings")]
+        [OdinSerialize] bool m_InitializeOnAwake = false;
+
         [Title("Basic")]
         [OdinSerialize] string m_ActorName = "ActorNameHere";
         public string ActorName
@@ -125,6 +128,11 @@ namespace EllGames.Wiz.GameSystem.Actor
         public void FullRecovery()
         {
             m_HP = m_MaxHP;
+        }
+
+        private void Awake()
+        {
+            if (m_InitializeOnAwake) Initialize();
         }
     }
 }
