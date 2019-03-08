@@ -9,42 +9,42 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Logo.unity
+    path: Assets/Wizardas/Scenes/0Logo.unity
     guid: 737e95b49c4b1ef4a856ce478278dfd2
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Opening.unity
+    path: Assets/Wizardas/Scenes/1Opening.unity
     guid: 16d2b5fd98a2e2d4aa62570e39365b9a
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Title.unity
+    path: Assets/Wizardas/Scenes/2Title.unity
     guid: 5a676d1e3e6219648970195e9cbe8503
   - enabled: 1
-    path: Assets/Wizardas/Scenes/MyRoom.unity
+    path: Assets/Wizardas/Scenes/3MyRoom.unity
     guid: 9b757ee4a23b5054b94878ad3b9b86f2
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Camp.unity
+    path: Assets/Wizardas/Scenes/3Camp.unity
     guid: 0527eaac82ce4b645aa9e2aa8430e208
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Load.unity
+    path: Assets/Wizardas/Scenes/4Load.unity
     guid: 56a001b933f6f8949be232ffb131c7c8
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Game.unity
+    path: Assets/Wizardas/Scenes/5Game.unity
     guid: e1b5143fd39bbde44a158c614a0429e9
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Result.unity
+    path: Assets/Wizardas/Scenes/6Result.unity
     guid: c1bbd31f33478394d8f7698c2365d73c
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Develop/OpeningDevelop.unity
+    path: Assets/Wizardas/Scenes/1OpeningDevelop.unity
     guid: 356972f0b1030a945902f1c073412b63
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Develop/TitleDevelop.unity
+    path: Assets/Wizardas/Scenes/2TitleDevelop.unity
     guid: be017295fa9204a4092e92bf2b05bfa2
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Develop/CampDevelop.unity
+    path: Assets/Wizardas/Scenes/3CampDevelop.unity
     guid: 78964895365bfcc4b887787e1c7d0a38
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Develop/MyRoomDevelop.unity
+    path: Assets/Wizardas/Scenes/3MyRoomDevelop.unity
     guid: 665105eb69d50ce43a634f878d4477d3
   - enabled: 1
-    path: Assets/Wizardas/Scenes/Develop/ResultDevelop.unity
+    path: Assets/Wizardas/Scenes/6ResultDevelop.unity
     guid: 9a2794d0b23f578458edf827bc3e32d0
   m_configObjects: {}

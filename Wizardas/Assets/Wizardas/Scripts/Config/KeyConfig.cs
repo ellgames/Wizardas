@@ -17,10 +17,18 @@ namespace EllGames.Wiz.Config
         [OdinSerialize] public KeyCode MoveBackwardKey { get; set; } = KeyCode.S;
         [OdinSerialize] public KeyCode MoveRightKey { get; set; } = KeyCode.D;
         [OdinSerialize] public KeyCode JumpKey { get; set; } = KeyCode.Space;
+        [OdinSerialize] public KeyCode StopKey1 { get; set; } = KeyCode.LeftControl;
+        [OdinSerialize] public KeyCode StopKey2 { get; set; } = KeyCode.RightControl;
         [OdinSerialize] public List<KeyCode> WalkTriggers = new List<KeyCode> { KeyCode.LeftShift, KeyCode.RightShift };
         [OdinSerialize] public KeyCode Skill1Key { get; set; } = KeyCode.I;
         [OdinSerialize] public KeyCode Skill2Key { get; set; } = KeyCode.J;
         [OdinSerialize] public KeyCode Skill3Key { get; set; } = KeyCode.K;
         [OdinSerialize] public KeyCode Skill4Key { get; set; } = KeyCode.L;
+        [OdinSerialize] public KeyCode UpKey { get; set; } = KeyCode.UpArrow;
+        [OdinSerialize] public KeyCode LeftKey { get; set; } = KeyCode.LeftArrow;
+        [OdinSerialize] public KeyCode DownKey { get; set; } = KeyCode.DownArrow;
+        [OdinSerialize] public KeyCode RightKey { get; set; } = KeyCode.RightArrow;
+        [OdinSerialize] public KeyCode DecitionKey { get; set; } = KeyCode.Return;
+        [OdinSerialize] public KeyCode CancelKey { get; set; } = KeyCode.Escape;
     }
 }

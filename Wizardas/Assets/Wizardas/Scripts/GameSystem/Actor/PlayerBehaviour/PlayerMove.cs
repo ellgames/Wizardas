@@ -82,6 +82,8 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 
         public Vector3 Velocity()
         {
+            if (Input.GetKey(m_KeyConfig.StopKey1) || Input.GetKey(m_KeyConfig.StopKey1)) return new Vector3(0f, m_Rigidbody.velocity.y, 0f);
+
             var velocity = MoveDirection() * MoveSpeed();   // Rigidbody.velocityはフレームなどに依存しないので、Time.deltaTimeを掛ける必要なはない
             velocity.y = m_Rigidbody.velocity.y;
             return velocity;
