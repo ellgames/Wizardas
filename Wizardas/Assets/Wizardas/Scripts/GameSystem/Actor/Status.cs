@@ -113,5 +113,18 @@ namespace EllGames.Wiz.GameSystem.Actor
             if (m_HP - amount > 0) m_HP -= amount;
             else m_HP = 0;
         }
+
+        public void SetMaxHP(int maxHP)
+        {
+            Debug.Assert(maxHP > 0);
+
+            m_MaxHP = maxHP;
+            if (m_HP > maxHP) m_HP = maxHP;
+        }
+
+        public void FullRecovery()
+        {
+            m_HP = m_MaxHP;
+        }
     }
 }
