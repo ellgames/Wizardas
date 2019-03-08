@@ -11,6 +11,7 @@ namespace EllGames.Wiz.Meta
 {
     public enum GAME_MODE
     {
+        Training,
         LimitFight,
         FinalFight
     }
