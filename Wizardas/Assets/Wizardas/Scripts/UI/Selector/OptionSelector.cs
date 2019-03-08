@@ -39,12 +39,20 @@ namespace EllGames.Wiz.UI.Selector
         }
 
         /// <summary>
-        /// すべての選択を解除します。
+        /// 何も選択していない状態にします。
         /// </summary>
-        [Button("Unselect")]
         public void Unselect()
         {
             m_Options.ForEach(option => option.Unselect());
+        }
+
+        /// <summary>
+        /// すべての選択を解除します。
+        /// </summary>
+        [Button("Cancel")]
+        public void Cancel()
+        {
+            Unselect();
             if (m_UsingSE) m_SEPlayer.PlayOneShot(m_CancelSE, m_CancelVolumeScale);
         }
 

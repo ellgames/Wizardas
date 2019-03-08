@@ -33,7 +33,7 @@ MonoBehaviour:
       Data: 1
     - Name: m_ATK
       Entry: 3
-      Data: 5
+      Data: 10
     - Name: m_WalkSpeed
       Entry: 4
       Data: 1
