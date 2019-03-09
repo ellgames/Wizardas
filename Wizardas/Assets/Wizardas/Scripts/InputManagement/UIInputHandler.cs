@@ -17,12 +17,14 @@ namespace EllGames.Wiz.InputManagement
 
         private void Update()
         {
-            if (Input.GetKeyDown(m_KeyConfig.UpKey) || Input.GetKeyDown(m_KeyConfig.MoveForwardKey) || Input.GetKeyDown(m_KeyConfig.Skill1Key))
+            if ((Input.GetKeyDown(m_KeyConfig.UpKey) || Input.GetKeyDown(m_KeyConfig.MoveForwardKey) || Input.GetKeyDown(m_KeyConfig.Skill1Key)) ||
+                (Input.GetKeyDown(m_KeyConfig.LeftKey) || Input.GetKeyDown(m_KeyConfig.MoveLeftKey) || Input.GetKeyDown(m_KeyConfig.Skill2Key)))
             {
                 m_UISelector.SelectPrevious();
             }
 
-            if (Input.GetKeyDown(m_KeyConfig.DownKey) || Input.GetKeyDown(m_KeyConfig.MoveBackwardKey) || Input.GetKeyDown(m_KeyConfig.Skill3Key))
+            if ((Input.GetKeyDown(m_KeyConfig.DownKey) || Input.GetKeyDown(m_KeyConfig.MoveBackwardKey) || Input.GetKeyDown(m_KeyConfig.Skill3Key)) ||
+                (Input.GetKeyDown(m_KeyConfig.RightKey) || Input.GetKeyDown(m_KeyConfig.MoveRightKey) || Input.GetKeyDown(m_KeyConfig.Skill4Key)))
             {
                 m_UISelector.SelectNext();
             }
