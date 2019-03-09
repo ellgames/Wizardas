@@ -19,10 +19,23 @@ namespace EllGames.Wiz.Profile
             set { m_Score = value; }
         }
 
+        [OdinSerialize] string m_ActorName;
+        public string ActorName
+        {
+            get { return m_ActorName; }
+        }
+        
+        [OdinSerialize] EllGames.Meta.DateTime m_DateTime;
+        public EllGames.Meta.DateTime DateTime
+        {
+            get { return m_DateTime; }
+        }
+
         [Button("Initialize")]
         public void Initialize()
         {
             m_Score = 0;
+            m_DateTime = EllGames.Meta.DateTime.Zero();
         }
 
         public void AddScore(int score)

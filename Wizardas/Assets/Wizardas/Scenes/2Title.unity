@@ -223,7 +223,11 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
     - gameObjects: []
-  m_RecentGameObjects: []
+  m_RecentGameObjects:
+  - gameObject: {fileID: 620566670}
+    timestamp: 636877482443334634
+  - gameObject: {fileID: 1417448337}
+    timestamp: 636877482455232458
 --- !u!4 &307878264
 Transform:
   m_ObjectHideFlags: 17
