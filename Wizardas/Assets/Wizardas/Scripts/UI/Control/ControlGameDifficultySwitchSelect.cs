@@ -18,6 +18,25 @@ namespace EllGames.Wiz.UI.Control
         [Title("Settings")]
         [OdinSerialize] Dictionary<int, Meta.GAME_DIFFICULTY> m_SelectedOptionIndexGameDifficultyPairs = new Dictionary<int, Meta.GAME_DIFFICULTY>();
 
+        int SearchIndex(Meta.GAME_DIFFICULTY difficulty)
+        {
+            foreach (var pair in m_SelectedOptionIndexGameDifficultyPairs)
+            {
+                if (difficulty == pair.Value)
+                {
+                    return pair.Key;
+                }
+            }
+
+            return -1;
+        }
+
+        private void Awake()
+        {
+            var latest = m_LatestGameProfile.GameDifficulty;
+            m_UISwitchSelect.SelectOptionByIndex(SearchIndex(latest));
+        }
+
         private void Update()
         {
             foreach (var pair in m_SelectedOptionIndexGameDifficultyPairs)

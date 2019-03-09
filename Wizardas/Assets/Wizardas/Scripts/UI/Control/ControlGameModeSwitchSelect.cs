@@ -18,6 +18,25 @@ namespace EllGames.Wiz.UI.Control
         [Title("Settings")]
         [OdinSerialize] Dictionary<int, Meta.GAME_MODE> m_SelectedOptionIndexGameModePairs = new Dictionary<int, Meta.GAME_MODE>();
 
+        int SearchIndex(Meta.GAME_MODE mode)
+        {
+            foreach (var pair in m_SelectedOptionIndexGameModePairs)
+            {
+                if (mode == pair.Value)
+                {
+                    return pair.Key;
+                }
+            }
+
+            return -1;
+        }
+
+        private void Awake()
+        {
+            var latest = m_LatestGameProfile.GameMode;
+            m_UISwitchSelect.SelectOptionByIndex(SearchIndex(latest));
+        }
+
         private void Update()
         {
             foreach (var pair in m_SelectedOptionIndexGameModePairs)
