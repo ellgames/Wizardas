@@ -16,12 +16,14 @@ namespace EllGames.Wiz.Profile
         public Meta.GAME_DIFFICULTY GameDifficulty
         {
             get { return m_GameDifficulty; }
+            set { m_GameDifficulty = value; }
         }
 
         [OdinSerialize] Meta.GAME_MODE m_GameMode;
         public Meta.GAME_MODE GameMode
         {
             get { return m_GameMode; }
+            set { m_GameMode = value; }
         }
     }
 }
