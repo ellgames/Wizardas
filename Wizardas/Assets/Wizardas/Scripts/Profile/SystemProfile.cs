@@ -19,5 +19,12 @@ namespace EllGames.Wiz.Profile
             get { return m_Language; }
             set { m_Language = value; }
         }
+
+        [OdinSerialize] bool m_Tutorial = true;
+        public bool Tutorial
+        {
+            get { return m_Tutorial; }
+            set { m_Tutorial = value; }
+        }
     }
 }
