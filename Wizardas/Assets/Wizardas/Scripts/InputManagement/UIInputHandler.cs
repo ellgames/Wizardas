@@ -13,28 +13,28 @@ namespace EllGames.Wiz.InputManagement
     {
         [Title("Required")]
         [OdinSerialize, Required] Config.KeyConfig m_KeyConfig;
-        [OdinSerialize, Required] UI.Selector.OptionSelector m_OptionSelector;
+        [OdinSerialize, Required] UI.Selection.UISelector m_UISelector;
 
         private void Update()
         {
             if (Input.GetKeyDown(m_KeyConfig.UpKey) || Input.GetKeyDown(m_KeyConfig.MoveForwardKey) || Input.GetKeyDown(m_KeyConfig.Skill1Key))
             {
-                m_OptionSelector.SelectPrevious();
+                m_UISelector.SelectPrevious();
             }
 
             if (Input.GetKeyDown(m_KeyConfig.DownKey) || Input.GetKeyDown(m_KeyConfig.MoveBackwardKey) || Input.GetKeyDown(m_KeyConfig.Skill3Key))
             {
-                m_OptionSelector.SelectNext();
+                m_UISelector.SelectNext();
             }
 
             if (Input.GetKeyDown(m_KeyConfig.DecitionKey) || Input.GetKeyDown(m_KeyConfig.JumpKey))
             {
-                m_OptionSelector.Decide();
+                m_UISelector.Decide();
             }
 
             if (Input.GetKeyDown(m_KeyConfig.CancelKey))
             {
-                m_OptionSelector.Cancel();
+                m_UISelector.Cancel();
             }
         }
     }
