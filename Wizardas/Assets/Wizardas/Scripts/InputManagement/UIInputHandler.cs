@@ -15,14 +15,19 @@ namespace EllGames.Wiz.InputManagement
         [OdinSerialize, Required] Config.KeyConfig m_KeyConfig;
         [OdinSerialize, Required] UI.Selection.UISelector m_UISelector;
 
+        [Title("Settings")]
+        [OdinSerialize] UnityEvent m_OnCancel = new UnityEvent();
+
         private void Update()
         {
-            if (Input.GetKeyDown(m_KeyConfig.UpKey) || Input.GetKeyDown(m_KeyConfig.MoveForwardKey) || Input.GetKeyDown(m_KeyConfig.Skill1Key))
+            if ((Input.GetKeyDown(m_KeyConfig.UpKey) || Input.GetKeyDown(m_KeyConfig.MoveForwardKey) || Input.GetKeyDown(m_KeyConfig.Skill1Key)) ||
+                (Input.GetKeyDown(m_KeyConfig.LeftKey) || Input.GetKeyDown(m_KeyConfig.MoveLeftKey) || Input.GetKeyDown(m_KeyConfig.Skill2Key)))
             {
                 m_UISelector.SelectPrevious();
             }
 
-            if (Input.GetKeyDown(m_KeyConfig.DownKey) || Input.GetKeyDown(m_KeyConfig.MoveBackwardKey) || Input.GetKeyDown(m_KeyConfig.Skill3Key))
+            if ((Input.GetKeyDown(m_KeyConfig.DownKey) || Input.GetKeyDown(m_KeyConfig.MoveBackwardKey) || Input.GetKeyDown(m_KeyConfig.Skill3Key)) ||
+                (Input.GetKeyDown(m_KeyConfig.RightKey) || Input.GetKeyDown(m_KeyConfig.MoveRightKey) || Input.GetKeyDown(m_KeyConfig.Skill4Key)))
             {
                 m_UISelector.SelectNext();
             }
@@ -35,6 +40,7 @@ namespace EllGames.Wiz.InputManagement
             if (Input.GetKeyDown(m_KeyConfig.CancelKey))
             {
                 m_UISelector.Cancel();
+                if (m_OnCancel != null) m_OnCancel.Invoke();
             }
         }
     }
