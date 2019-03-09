@@ -7,7 +7,7 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 
-namespace EllGames.Meta
+namespace EllGames.Wiz.Meta
 {
     public struct DateTime
     {

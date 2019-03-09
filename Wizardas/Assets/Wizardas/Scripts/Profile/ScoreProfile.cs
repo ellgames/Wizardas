@@ -25,8 +25,8 @@ namespace EllGames.Wiz.Profile
             get { return m_ActorName; }
         }
         
-        [OdinSerialize] EllGames.Meta.DateTime m_DateTime;
-        public EllGames.Meta.DateTime DateTime
+        [OdinSerialize] Meta.DateTime m_DateTime;
+        public Meta.DateTime DateTime
         {
             get { return m_DateTime; }
         }
@@ -35,7 +35,7 @@ namespace EllGames.Wiz.Profile
         public void Initialize()
         {
             m_Score = 0;
-            m_DateTime = EllGames.Meta.DateTime.Zero();
+            m_DateTime = Meta.DateTime.Zero();
         }
 
         public void AddScore(int score)

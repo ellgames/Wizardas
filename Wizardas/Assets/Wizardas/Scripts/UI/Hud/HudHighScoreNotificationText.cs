@@ -80,7 +80,7 @@ namespace EllGames.Wiz.UI.Hud
             return null;
         }
 
-        string DateTimeString(EllGames.Meta.DateTime dateTime)
+        string DateTimeString(Meta.DateTime dateTime)
         {
             return dateTime.Year.ToString("D4") + m_DateTimeSeparator + dateTime.Month.ToString("D2") + m_DateTimeSeparator + dateTime.Day.ToString("D2");
         }

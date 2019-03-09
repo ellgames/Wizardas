@@ -12,6 +12,7 @@ namespace EllGames.Wiz.UI.Selection
     public class UISelector : SerializedMonoBehaviour
     {
         [Title("Settings")]
+        [OdinSerialize] int? m_InitialSelectIndex = null;
         [OdinSerialize] List<Selectable> m_Selectables;
 
         [Title("SE")]
@@ -149,6 +150,12 @@ namespace EllGames.Wiz.UI.Selection
 
             m_Selectables[(int)selectedIndex].Decide();
             if (m_UsingSE) m_SEPlayer.PlayOneShot(m_DecideSE, m_DecideVolumeScale);
+        }
+
+        private void Awake()
+        {
+            if (m_InitialSelectIndex == null) return;
+            Select((int)m_InitialSelectIndex);
         }
     }
 }
