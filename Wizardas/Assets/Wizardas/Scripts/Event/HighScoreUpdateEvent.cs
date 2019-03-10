@@ -54,8 +54,6 @@ namespace EllGames.Wiz.Event
                     break;
             }
 
-            Debug.Log(highScoreProfile);
-
             if (highScoreProfile != null)
             {
                 if (m_LatestScoreProfile.Score >= highScoreProfile.Score)

@@ -10,8 +10,20 @@ using Sirenix.Serialization;
 namespace EllGames.Wiz.Profile
 {
     [CreateAssetMenu(menuName = "Profile/SystemProfile", fileName = "SystemProfile")]
-    public class SystemProfile : SerializedScriptableObject
+    public class SystemProfile : SerializedScriptableObject, Save.ISavable
     {
+        void Save.ISavable.Save()
+        {
+            ES2.Save(m_Language, "SystemProfile/Language");
+            ES2.Save(m_Tutorial, "SystemProfile/Tutorial");
+        }
+
+        void Save.ISavable.Load()
+        {
+            m_Language = ES2.Load<Meta.LANGUAGE>("SystemProfile/Language");
+            m_Tutorial = ES2.Load<bool>("SystemProfile/Tutorial");
+        }
+
         [Title("Meta")]
         [OdinSerialize] Meta.LANGUAGE m_Language = Meta.LANGUAGE.Japanese;
         public Meta.LANGUAGE Language

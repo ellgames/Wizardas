@@ -10,8 +10,35 @@ using Sirenix.Serialization;
 namespace EllGames.Wiz.Profile
 {
     [CreateAssetMenu(menuName = "Profile/ScoreProfile", fileName = "ScoreProfile")]
-    public class ScoreProfile : SerializedScriptableObject
+    public class ScoreProfile : SerializedScriptableObject, Save.ISavable
     {
+        void Save.ISavable.Save()
+        {
+            ES2.Save(m_Score, "ScoreProfile/Score");
+            if (m_ActorName != null) ES2.Save(m_ActorName, "ScoreProfile/ActorName");
+            ES2.Save(m_DateTime.Year, "ScoreProfile/DateTime_Year");
+            ES2.Save(m_DateTime.Month, "ScoreProfile/DateTime_Month");
+            ES2.Save(m_DateTime.Day, "ScoreProfile/DateTime_Day");
+            ES2.Save(m_DateTime.Hour, "ScoreProfile/DateTime_Hour");
+            ES2.Save(m_DateTime.Minute, "ScoreProfile/DateTime_Minute");
+            ES2.Save(m_DateTime.Second, "ScoreProfile/DateTime_Second");
+        }
+
+        void Save.ISavable.Load()
+        {
+            m_Score = ES2.Load<int>("ScoreProfile/Score");
+            if (ES2.Load<string>("ScoreProfile/ActorName") != null)
+            {
+                m_ActorName = ES2.Load<string>("ScoreProfile/ActorName");
+            }
+            m_DateTime.Year = ES2.Load<int>("ScoreProfile/DateTime_Year");
+            m_DateTime.Month = ES2.Load<int>("ScoreProfile/DateTime_Month");
+            m_DateTime.Day = ES2.Load<int>("ScoreProfile/DateTime_Day");
+            m_DateTime.Hour = ES2.Load<int>("ScoreProfile/DateTime_Hour");
+            m_DateTime.Minute = ES2.Load<int>("ScoreProfile/DateTime_Minute");
+            m_DateTime.Second = ES2.Load<int>("ScoreProfile/DateTime_Second");
+        }
+
         [OdinSerialize] int m_Score;
         public int Score
         {

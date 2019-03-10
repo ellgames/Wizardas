@@ -10,8 +10,20 @@ using Sirenix.Serialization;
 namespace EllGames.Wiz.Profile
 {
     [CreateAssetMenu(menuName = "Profile/GameProfile", fileName = "GameProfile")]
-    public class GameProfile : SerializedScriptableObject
+    public class GameProfile : SerializedScriptableObject, Save.ISavable
     {
+        void Save.ISavable.Save()
+        {
+            ES2.Save(m_GameDifficulty, "GameProfile/GameDifficulty");
+            ES2.Save(m_GameMode, "GameProfile/GameMode");
+        }
+
+        void Save.ISavable.Load()
+        {
+            m_GameDifficulty = ES2.Load<Meta.GAME_DIFFICULTY>("GameProfile/GameDifficulty");
+            m_GameMode = ES2.Load<Meta.GAME_MODE>("GameProfile/GameMode");
+        }
+
         [OdinSerialize] Meta.GAME_DIFFICULTY m_GameDifficulty;
         public Meta.GAME_DIFFICULTY GameDifficulty
         {

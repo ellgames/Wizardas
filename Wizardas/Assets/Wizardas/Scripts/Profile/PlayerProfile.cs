@@ -10,8 +10,18 @@ using Sirenix.Serialization;
 namespace EllGames.Wiz.Profile
 {
     [CreateAssetMenu(menuName = "Profile/PlayerProfile", fileName = "PlayerProfile")]
-    public class PlayerProfile : SerializedScriptableObject
+    public class PlayerProfile : SerializedScriptableObject, Save.ISavable
     {
+        void Save.ISavable.Save()
+        {
+            ES2.Save(m_PlayerName, "PlayerProfile/PlayerName");
+        }
+
+        void Save.ISavable.Load()
+        {
+            m_PlayerName = ES2.Load<string>("PlayerProfile/PlayerName");
+        }
+
         [OdinSerialize] string m_PlayerName;
         public string PlayerName
         {
