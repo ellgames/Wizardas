@@ -33,6 +33,21 @@ namespace EllGames.Wiz.GameSystem
             m_TimeLimitNotification.gameObject.SetActive(false);
             m_Timer.gameObject.SetActive(false);
             m_TimeLimitBar.gameObject.SetActive(false);
+
+            switch (m_LatestGameProfile.GameMode)
+            {
+                case Meta.GAME_MODE.Training:
+                    m_PlayerStatus.SetMaxHP(m_PlayerMaxHP_TrainingMode);
+                    break;
+                case Meta.GAME_MODE.LimitFight:
+                    m_PlayerStatus.SetMaxHP(m_PlayerMaxHP_LimitFightMode);
+                    break;
+                case Meta.GAME_MODE.FinalFight:
+                    m_PlayerStatus.SetMaxHP(m_PlayerMaxHP_FinalFightMode);
+                    break;
+            }
+
+            m_PlayerStatus.FullRecovery();
         }
 
         private void Awake()

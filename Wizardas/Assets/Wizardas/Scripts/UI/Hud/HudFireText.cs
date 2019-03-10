@@ -27,6 +27,7 @@ namespace EllGames.Wiz.UI.Hud
 
         private void Update()
         {
+            /* シンプルにフェードアウトしていくパターン*/
             /*
             m_TimeElapsed += Time.deltaTime;
 
@@ -37,7 +38,6 @@ namespace EllGames.Wiz.UI.Hud
             m_Text.fontSize = (int)Mathf.Lerp(m_StartFontSize, m_EndFontSize, m_TimeElapsed / m_Duration);
             */
 
-            /* 半分待機後にフェードアウトしていくパターン*/
             m_TimeElapsed += Time.deltaTime;
 
             if (m_TimeElapsed >= m_Duration / 2)
