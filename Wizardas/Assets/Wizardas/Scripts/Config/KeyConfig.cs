@@ -30,5 +30,6 @@ namespace EllGames.Wiz.Config
         [OdinSerialize] public KeyCode RightKey { get; set; } = KeyCode.RightArrow;
         [OdinSerialize] public KeyCode DecitionKey { get; set; } = KeyCode.Return;
         [OdinSerialize] public KeyCode CancelKey { get; set; } = KeyCode.Escape;
+        [OdinSerialize] public KeyCode YesKey { get; set; } = KeyCode.Y;
     }
 }
