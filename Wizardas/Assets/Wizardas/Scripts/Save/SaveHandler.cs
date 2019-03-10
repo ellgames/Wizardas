@@ -12,6 +12,7 @@ namespace EllGames.Wiz.Save
     [CreateAssetMenu(menuName = "Save/SaveHandler", fileName = "SaveHandler")]
     public class SaveHandler : SerializedScriptableObject
     {
+        // TODO
         [Title("Required")]
         [OdinSerialize, Required] Profile.HitProfile m_HitProfile;
         [OdinSerialize, Required] Profile.SystemProfile m_SystemProfile;
