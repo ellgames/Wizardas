@@ -20,5 +20,10 @@ namespace EllGames.Wiz.UI
         {
             gameObject.SetActive(false);
         }
+
+        public void FlipActivate()
+        {
+            gameObject.SetActive(!gameObject.activeSelf);
+        }
     }
 }
