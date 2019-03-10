@@ -23,24 +23,34 @@ namespace EllGames.Wiz.Profile
         public string ActorName
         {
             get { return m_ActorName; }
+            set { m_ActorName = value; }
         }
         
         [OdinSerialize] Meta.DateTime m_DateTime;
         public Meta.DateTime DateTime
         {
             get { return m_DateTime; }
+            set { m_DateTime = value; }
         }
 
         [Button("Initialize")]
         public void Initialize()
         {
             m_Score = 0;
+            m_ActorName = "";
             m_DateTime = Meta.DateTime.Zero();
         }
 
         public void AddScore(int score)
         {
             m_Score += score;
+        }
+
+        public void Copy(ScoreProfile profile)
+        {
+            m_Score = profile.Score;
+            m_ActorName = profile.ActorName;
+            m_DateTime = profile.DateTime;
         }
     }
 }
