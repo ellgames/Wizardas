@@ -23,7 +23,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_Language
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: m_Tutorial
       Entry: 5
       Data: false

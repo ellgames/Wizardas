@@ -13,6 +13,7 @@ namespace EllGames.Wiz.UI.Hud
     public class HudHighScoreNotificationText : HudComponent
     {
         [Title("Required")]
+        [OdinSerialize, Required] Profile.GameProfile m_LatestGameProfile;
         [OdinSerialize, Required] Profile.SystemProfile m_SystemProfile;
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_MA;
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_IM;
@@ -92,6 +93,10 @@ namespace EllGames.Wiz.UI.Hud
 
         private void Update()
         {
+            Debug.Assert(m_LatestGameProfile != null);
+            m_TargetDifficulty = m_LatestGameProfile.GameDifficulty;
+            m_TargetMode = m_LatestGameProfile.GameMode;
+
             Debug.Assert(m_Text != null);
 
             string title = "";
