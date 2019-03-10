@@ -16,53 +16,53 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 1d8c81a10923834418c9755c3a86c2e7, type: 2}
-    - {fileID: 11400000, guid: c0947b5d16e70db45ba2d1d6f96e2d11, type: 2}
-    - {fileID: 11400000, guid: eaa578788afa3c74697a5f4a1201095e, type: 2}
-    - {fileID: 11400000, guid: 91caba8f7c114bc4eb7c8c3ff5475b3b, type: 2}
     - {fileID: 11400000, guid: 5370384a35d3c7b49a6dec0f76c0ad4e, type: 2}
     - {fileID: 11400000, guid: 808d34a6a8c224344936c5e9796da97a, type: 2}
+    - {fileID: 11400000, guid: eaa578788afa3c74697a5f4a1201095e, type: 2}
+    - {fileID: 11400000, guid: 91caba8f7c114bc4eb7c8c3ff5475b3b, type: 2}
+    - {fileID: 11400000, guid: 934301430687f244e9333edad1b557d4, type: 2}
+    - {fileID: 11400000, guid: 463be815e163a5648922db08d9ec53d9, type: 2}
+    - {fileID: 11400000, guid: 62f44ab6473dbd344a0aba85c6b44d5b, type: 2}
+    - {fileID: 11400000, guid: c0947b5d16e70db45ba2d1d6f96e2d11, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: m_ComboProfile
+    - Name: m_ISavables
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EllGames.Wiz.Save.ISavable, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
       Entry: 10
       Data: 0
-    - Name: m_SystemProfile
+    - Name: 
       Entry: 10
       Data: 1
-    - Name: m_HighScoreProfile_LF_IM
+    - Name: 
       Entry: 10
       Data: 2
-    - Name: m_HighScoreProfile_LF_MA
+    - Name: 
       Entry: 10
       Data: 3
-    - Name: m_HighScoreProfile_FF_IM
+    - Name: 
       Entry: 10
       Data: 4
-    - Name: m_HighScoreProfile_FF_MA
+    - Name: 
       Entry: 10
       Data: 5
-    - Name: m_DefaultSaveDirectory
-      Entry: 1
-      Data: SaveData/
-    - Name: m_SaveFileName_ComboCount
-      Entry: 1
-      Data: ComboCount
-    - Name: m_SaveFileName_Language
-      Entry: 1
-      Data: Language
-    - Name: m_SaveFileName_Highscore_LF_IM
-      Entry: 1
-      Data: Highscore/LF/IM
-    - Name: m_SaveFileName_Highscore_LF_MA
-      Entry: 1
-      Data: Highscore/LF/MA
-    - Name: m_SaveFileName_Highscore_FF_IM
-      Entry: 1
-      Data: Highscore/FF/IM
-    - Name: m_SaveFileName_Highscore_FF_MA
-      Entry: 1
-      Data: Highscore/FF/MA
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

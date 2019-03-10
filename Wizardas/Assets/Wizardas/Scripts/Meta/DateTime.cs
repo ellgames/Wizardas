@@ -9,6 +9,7 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.Meta
 {
+    [System.Serializable]
     public struct DateTime
     {
         public int Year;

@@ -12,12 +12,56 @@ namespace EllGames.Wiz.Event
     public class HighScoreUpdateEvent : EventBase
     {
         [Title("Required")]
+        [OdinSerialize, Required] Profile.GameProfile m_LatestGameProfile;
+        [OdinSerialize, Required] Profile.ScoreProfile m_LatestScoreProfile;
+        [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_MA;
+        [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_IM;
+        [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_FF_MA;
+        [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_FF_IM;
+
+        [Title("Settings")]
+        [OdinSerialize] UnityEvent m_OnNewHighScoreRecorded = new UnityEvent();
 
         public override void Invoke()
         {
             base.Invoke();
 
-            // TODO
+            Profile.ScoreProfile highScoreProfile = null;
+
+            switch (m_LatestGameProfile.GameMode)
+            {
+                case Meta.GAME_MODE.LimitFight:
+                    switch (m_LatestGameProfile.GameDifficulty)
+                    {
+                        case Meta.GAME_DIFFICULTY.Master:
+                            highScoreProfile = m_HighScoreProfile_LF_MA;
+                            break;
+                        case Meta.GAME_DIFFICULTY.Impossible:
+                            highScoreProfile = m_HighScoreProfile_LF_IM;
+                            break;
+                    }
+                    break;
+                case Meta.GAME_MODE.FinalFight:
+                    switch (m_LatestGameProfile.GameDifficulty)
+                    {
+                        case Meta.GAME_DIFFICULTY.Master:
+                            highScoreProfile = m_HighScoreProfile_FF_MA;
+                            break;
+                        case Meta.GAME_DIFFICULTY.Impossible:
+                            highScoreProfile = m_HighScoreProfile_FF_IM;
+                            break;
+                    }
+                    break;
+            }
+
+            if (highScoreProfile != null)
+            {
+                if (m_LatestScoreProfile.Score >= highScoreProfile.Score)
+                {
+                    highScoreProfile.Copy(m_LatestScoreProfile);
+                    if (m_OnNewHighScoreRecorded != null) m_OnNewHighScoreRecorded.Invoke();
+                }
+            }
         }
     }
 }
