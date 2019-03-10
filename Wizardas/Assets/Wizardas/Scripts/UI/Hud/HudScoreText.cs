@@ -14,6 +14,11 @@ namespace EllGames.Wiz.UI.Hud
     {
         [Title("Required")]
         [OdinSerialize, Required] Profile.ScoreProfile m_ScoreProfile;
+        [OdinSerialize, Required] Profile.SystemProfile m_SystemProfile;
+
+        [Title("Settings")]
+        [OdinSerialize] string m_Unit_Jpn = "ポイント";
+        [OdinSerialize] string m_Unit_Eng = "Points";
 
         Text m_Text;
 
@@ -26,8 +31,17 @@ namespace EllGames.Wiz.UI.Hud
         {
             Debug.Assert(m_Text != null);
             Debug.Assert(m_ScoreProfile != null);
+            Debug.Assert(m_SystemProfile != null);
 
-            m_Text.text = m_ScoreProfile.Score.ToString("N0");
+            switch (m_SystemProfile.Language)
+            {
+                case Meta.LANGUAGE.Japanese:
+                    m_Text.text = m_ScoreProfile.Score.ToString("N0") + " " + m_Unit_Jpn;
+                    break;
+                case Meta.LANGUAGE.English:
+                    m_Text.text = m_ScoreProfile.Score.ToString("N0") + " " + m_Unit_Eng;
+                    break;
+            }
         }
     }
 }
