@@ -19,6 +19,9 @@ namespace EllGames.Wiz.Event
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_FF_MA;
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_FF_IM;
 
+        [Title("Settings")]
+        [OdinSerialize] UnityEvent m_OnNewHighScoreRecorded = new UnityEvent();
+
         public override void Invoke()
         {
             base.Invoke();
@@ -51,7 +54,16 @@ namespace EllGames.Wiz.Event
                     break;
             }
 
-            if (highScoreProfile != null) highScoreProfile.Copy(m_LatestScoreProfile);
+            Debug.Log(highScoreProfile);
+
+            if (highScoreProfile != null)
+            {
+                if (m_LatestScoreProfile.Score >= highScoreProfile.Score)
+                {
+                    highScoreProfile.Copy(m_LatestScoreProfile);
+                    if (m_OnNewHighScoreRecorded != null) m_OnNewHighScoreRecorded.Invoke();
+                }
+            }
         }
     }
 }

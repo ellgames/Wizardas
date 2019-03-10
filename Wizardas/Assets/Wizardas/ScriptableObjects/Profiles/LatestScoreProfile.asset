@@ -23,10 +23,13 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_Score
       Entry: 3
-      Data: 0
+      Data: 120
+    - Name: m_ActorName
+      Entry: 1
+      Data: TestPlayer
     - Name: m_DateTime
       Entry: 7
-      Data: EllGames.Meta.DateTime, Assembly-CSharp
+      Data: EllGames.Wiz.Meta.DateTime, Assembly-CSharp
     - Name: Year
       Entry: 3
       Data: 0
