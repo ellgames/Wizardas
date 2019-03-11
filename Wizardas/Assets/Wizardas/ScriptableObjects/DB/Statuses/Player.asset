@@ -35,10 +35,10 @@ MonoBehaviour:
       Data: 1
     - Name: m_WalkSpeed
       Entry: 4
-      Data: 6
+      Data: 4
     - Name: m_RunSpeed
       Entry: 4
-      Data: 12
+      Data: 8
     - Name: m_DeathVoice
       Entry: 6
       Data: 
