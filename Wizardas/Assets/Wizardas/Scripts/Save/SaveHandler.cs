@@ -34,7 +34,16 @@ namespace EllGames.Wiz.Save
 #endif
 
             if (m_ISavables == null) return;
-            m_ISavables.ForEach(savable => savable.Load());
+            try
+            {
+                m_ISavables.ForEach(savable => savable.Load());
+            }
+            catch
+            {
+#if UNITY_EDITOR
+                Debug.Log("Failed to Load.");
+#endif
+            }
         }
 
         [Button("Delete")]

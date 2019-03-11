@@ -16,12 +16,16 @@ namespace EllGames.Wiz.Profile
         {
             ES2.Save(m_Language, "SystemProfile/Language");
             ES2.Save(m_Tutorial, "SystemProfile/Tutorial");
+            ES2.Save(m_StartFromTitle, "SystemProfile/StartFromTitle");
+            ES2.Save(LowSpecMode, "SystemProfile/LowSpecMode");
         }
 
         void Save.ISavable.Load()
         {
             m_Language = ES2.Load<Meta.LANGUAGE>("SystemProfile/Language");
             m_Tutorial = ES2.Load<bool>("SystemProfile/Tutorial");
+            m_StartFromTitle = ES2.Load<bool>("SystemProfile/StartFromTitle");
+            m_LowSpecMode = ES2.Load<bool>("SystemProfile/LowSpecMode");
         }
 
         [Title("Meta")]
@@ -37,6 +41,20 @@ namespace EllGames.Wiz.Profile
         {
             get { return m_Tutorial; }
             set { m_Tutorial = value; }
+        }
+
+        [OdinSerialize] bool m_StartFromTitle = false;
+        public bool StartFromTitle
+        {
+            get { return m_StartFromTitle; }
+            set { m_StartFromTitle = value; }
+        }
+
+        [OdinSerialize] bool m_LowSpecMode = false;
+        public bool LowSpecMode
+        {
+            get { return m_LowSpecMode; }
+            set { m_LowSpecMode = value; }
         }
     }
 }
