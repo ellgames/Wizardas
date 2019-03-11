@@ -21,6 +21,7 @@ namespace EllGames.Wiz.InputManagement
         [OdinSerialize] DB.SkillInfo m_SkillInfo_HellFire;
         [OdinSerialize] DB.SkillInfo m_SkillInfo_HellFlameFissure;
         [OdinSerialize] DB.SkillInfo m_SkillInfo_HellArea;
+        [OdinSerialize] DB.SkillInfo m_SkillInfo_QuickCure;
 
         private void Update()
         {
@@ -47,6 +48,11 @@ namespace EllGames.Wiz.InputManagement
             if (Input.GetKey(m_KeyConfig.Skill4Key))
             {
                 m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_HellArea.SkillIdentifier);
+            }
+
+            if (Input.GetKey(m_KeyConfig.Skill5Key))
+            {
+                m_PlayerBehaviourHandler.UseSkill(m_SkillInfo_QuickCure.SkillIdentifier);
             }
         }
     }

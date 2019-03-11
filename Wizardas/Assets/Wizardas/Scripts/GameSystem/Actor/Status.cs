@@ -109,6 +109,12 @@ namespace EllGames.Wiz.GameSystem.Actor
             m_RunSpeed = m_DefaultStatus.RunSpeed;
         }
 
+        public void IncreaseHP(int amount)
+        {
+            if (m_HP + amount <= m_MaxHP) m_HP += amount;
+            else m_HP = m_MaxHP;
+        }
+
         public void DecreaseHP(int amount)
         {
             if (m_Invincible) return;
