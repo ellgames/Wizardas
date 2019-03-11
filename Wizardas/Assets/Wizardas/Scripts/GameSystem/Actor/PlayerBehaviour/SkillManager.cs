@@ -9,8 +9,18 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
 {
-    public class SkillManager : SerializedMonoBehaviour
+    public class SkillManager : SerializedMonoBehaviour, ISkillUseWatch
     {
+        bool ISkillUseWatch.SkillUsing()
+        {
+            foreach(var command in m_UseSkillCommands)
+            {
+                if (command.UsingTimeRemain > 0f) return true;
+            }
+
+            return false;
+        }
+
         [Title("Required")]
         [OdinSerialize, Required] IDeadWatch m_IDeadWatch;
         [OdinSerialize, Required] List<UseSkillCommandBase> m_UseSkillCommands = new List<UseSkillCommandBase>();

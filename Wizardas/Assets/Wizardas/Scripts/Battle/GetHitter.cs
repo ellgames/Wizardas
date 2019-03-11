@@ -23,6 +23,11 @@ namespace EllGames.Wiz.Battle
         [OdinSerialize, EnableIf("m_UsingGetHitAnimation")] Animator m_Animator;
         [OdinSerialize, EnableIf("m_UsingGetHitAnimation")] string m_GetHitAnimationName;
 
+        [Title("Damage Text")]
+        [OdinSerialize] bool m_UsingDamageText = false;
+        [OdinSerialize, EnableIf("m_UsingDamageText")] Guirao.UltimateTextDamage.UltimateTextDamageManager m_UltimateTextDamageManager;
+        [OdinSerialize, EnableIf("m_UsingDamageText")] Transform m_DamageTextPoint;
+
         [Button("Get Hit (Damage Only)")]
         public void GetHit(int damage)
         {
@@ -31,6 +36,7 @@ namespace EllGames.Wiz.Battle
             m_IApplyDamage.ApplyDamage(damage);
 
             if (m_UsingGetHitAnimation) m_Animator.SetTrigger(m_GetHitAnimationName);
+            if (m_UsingDamageText) m_UltimateTextDamageManager.Add(damage.ToString(), m_DamageTextPoint, "PlayerGetHit");
         }
 
         public void GetHit(int damage, GameObject hitParticle = null)

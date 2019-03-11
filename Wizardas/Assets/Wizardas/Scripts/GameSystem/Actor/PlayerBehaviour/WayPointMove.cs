@@ -54,6 +54,13 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             Initialize();
         }
 
+        [Button("Stop Immediately")]
+        public void StopImmediately()
+        {
+            Stop();
+            m_Rigidbody.velocity = Vector3.zero;
+        }
+
         public void Initialize()
         {
             m_RaycastHitObject = null;
