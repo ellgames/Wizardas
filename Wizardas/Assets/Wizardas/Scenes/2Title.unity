@@ -7340,26 +7340,26 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 1328555455}
-    timestamp: 636879436208491964
-  - gameObject: {fileID: 1552818439}
-    timestamp: 636879436220809003
   - gameObject: {fileID: 3532142937257989010}
-    timestamp: 636879436421157018
-  - gameObject: {fileID: 1612318348}
-    timestamp: 636879438595914998
-  - gameObject: {fileID: 620566670}
-    timestamp: 636879438601976479
-  - gameObject: {fileID: 1407349205}
-    timestamp: 636879438605651597
-  - gameObject: {fileID: 1612318348}
-    timestamp: 636879438607650454
+    timestamp: 636879441548926863
+  - gameObject: {fileID: 7714934489973365088}
+    timestamp: 636879442619611383
+  - gameObject: {fileID: 7714745166761376928}
+    timestamp: 636879442628336408
+  - gameObject: {fileID: 1178612136}
+    timestamp: 636879442630362682
+  - gameObject: {fileID: 7714745166761376928}
+    timestamp: 636879442637544656
+  - gameObject: {fileID: 7714934489973365088}
+    timestamp: 636879442639070806
   - gameObject: {fileID: 7716757986326104048}
-    timestamp: 636879438620321825
-  - gameObject: {fileID: 657867715}
-    timestamp: 636879438640772484
+    timestamp: 636879442642297879
+  - gameObject: {fileID: 2099222729}
+    timestamp: 636879442752340957
   - gameObject: {fileID: 7716757986326104048}
-    timestamp: 636879438689488915
+    timestamp: 636879442843485292
+  - gameObject: {fileID: 7714934489973365088}
+    timestamp: 636879442890368674
 --- !u!4 &307878264
 Transform:
   m_ObjectHideFlags: 17
@@ -34169,7 +34169,7 @@ MonoBehaviour:
     - {fileID: 7496925832089900630}
     - {fileID: 7497238825494809876}
     - {fileID: 7498242771779708838}
-    - {fileID: 7674442816755063048}
+    - {fileID: 0}
     - {fileID: 7674452626704862612}
     - {fileID: 7677717340855345114}
     - {fileID: 7674578152082797722}
@@ -54313,7 +54313,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 581670235}
-    - {fileID: 7674442816755063048}
+    - {fileID: 7716757986326104048}
     - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -54344,10 +54344,10 @@ MonoBehaviour:
       Data: 1
     - Name: m_MethodName
       Entry: 1
-      Data: Show
+      Data: SetActive
     - Name: m_Mode
       Entry: 3
-      Data: 1
+      Data: 6
     - Name: m_Arguments
       Entry: 7
       Data: 4|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
@@ -56831,6 +56831,8 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 301d81b86769e7242842a8b2eae17570, type: 2}
     - {fileID: 1912425134}
+    - {fileID: 7716757986326104048}
+    - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -56854,7 +56856,49 @@ MonoBehaviour:
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 2
+    - Name: m_MethodName
+      Entry: 1
+      Data: SetActive
+    - Name: m_Mode
+      Entry: 3
+      Data: 6
+    - Name: m_Arguments
+      Entry: 7
+      Data: 4|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 3
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
       Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: 
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -59624,37 +59668,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &7674442816755063048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7716757986326104048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69657661335df8f4dbcf3cd6e8f75593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_WindowId: 0
-  m_CustomWindowId: 1
-  m_StartingState: 0
-  m_EscapeKeyAction: 1
-  m_UseBlackOverlay: 0
-  m_FocusAllowReparent: 1
-  m_Transition: 1
-  m_TransitionEasing: 13
-  m_TransitionDuration: 0.1
-  onTransitionBegin:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: DuloGames.UI.UIWindow+TransitionBeginEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTransitionComplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: DuloGames.UI.UIWindow+TransitionCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &7674452626704862612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60374,9 +60387,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7674442816755063048}
-        m_MethodName: Hide
-        m_Mode: 1
+      - m_Target: {fileID: 7716757986326104048}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -60828,7 +60841,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7496664072745526704}
-  - component: {fileID: 7674442816755063048}
   - component: {fileID: 7494729729314164614}
   - component: {fileID: 7675108069568206658}
   - component: {fileID: 7509460198655515396}

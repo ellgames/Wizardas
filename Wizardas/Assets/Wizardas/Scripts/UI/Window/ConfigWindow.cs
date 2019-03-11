@@ -21,8 +21,8 @@ namespace EllGames.Wiz.UI.Window
 
         private void OnEnable()
         {
-            if (m_SystemProfile.Language == Meta.LANGUAGE.English) m_UseEnglishToggle.isOn = true;
-            if (m_SystemProfile.Language == Meta.LANGUAGE.Japanese) m_UseJapaneseToggle.isOn = true;
+            m_UseEnglishToggle.isOn = m_SystemProfile.Language == Meta.LANGUAGE.English;
+            m_UseJapaneseToggle.isOn = m_SystemProfile.Language == Meta.LANGUAGE.Japanese;
             m_StartFromTitleToggle.isOn = m_SystemProfile.StartFromTitle;
             m_LowSpecModeToggle.isOn = m_SystemProfile.LowSpecMode;
         }
