@@ -13,6 +13,7 @@ namespace EllGames.Wiz.GameSystem.Actor
     {
         [Title("Required")]
         [OdinSerialize, Required] IDeadWatch m_IDeadWatch;
+        [OdinSerialize, Required] PlayerBehaviour.ISkillUseWatch m_ISkillUseWatch;
         [OdinSerialize, Required] PlayerBehaviour.PlayerBehaviourHandler m_PlayerBehaviourHandler;
 
         bool m_HasKilled = false;
@@ -20,6 +21,7 @@ namespace EllGames.Wiz.GameSystem.Actor
         private void Update()
         {
             Debug.Assert(m_IDeadWatch != null);
+            Debug.Assert(m_ISkillUseWatch != null);
 
             if (m_IDeadWatch.IsDead())
             {
@@ -32,6 +34,16 @@ namespace EllGames.Wiz.GameSystem.Actor
             else
             {
                 m_HasKilled = false;
+
+                if (m_ISkillUseWatch.SkillUsing())
+                {
+                    m_PlayerBehaviourHandler.StopImmediately();
+                    m_PlayerBehaviourHandler.DisallowMove();
+                }
+                else
+                {
+                    m_PlayerBehaviourHandler.AllowMove();
+                }
             }
         }
     }

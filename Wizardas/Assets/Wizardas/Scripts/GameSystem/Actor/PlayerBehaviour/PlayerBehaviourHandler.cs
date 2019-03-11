@@ -16,6 +16,11 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         [OdinSerialize, Required] SkillManager m_SkillManager;
         [OdinSerialize, Required] Die m_Die;
 
+        public void StopImmediately()
+        {
+            m_PlayerMove.StopImmediately();
+        }
+
 	    public void UseSkill(string skillIdentifier)
         {
             m_SkillManager.UseSkill(skillIdentifier);

@@ -111,6 +111,18 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
             }
         }
 
+        [Button("Stop Immediately")]
+        public void StopImmediately()
+        {
+            DisallowMove();
+            AllowMove();
+
+            var velocity = m_Rigidbody.velocity;
+            velocity.x = 0f;
+            velocity.z = 0f;
+            m_Rigidbody.velocity = velocity;
+        }
+
         void UpdateState()
         {
             if (Input.GetKey(m_KeyConfig.MoveForwardKey) || Input.GetKey(m_KeyConfig.MoveLeftKey) || Input.GetKey(m_KeyConfig.MoveBackwardKey) || Input.GetKey(m_KeyConfig.MoveRightKey))
