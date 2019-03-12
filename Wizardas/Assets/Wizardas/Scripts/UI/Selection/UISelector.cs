@@ -25,6 +25,11 @@ namespace EllGames.Wiz.UI.Selection
         [OdinSerialize, EnableIf("m_UsingSE")] AudioClip m_CancelSE;
         [OdinSerialize, EnableIf("m_UsingSE")] float m_CancelVolumeScale = 0.8f;
 
+        public void PlayDecideAudioClip()
+        {
+            if (m_UsingSE) m_SEPlayer.PlayOneShot(m_DecideSE, m_DecideVolumeScale);
+        }
+
         /// <summary>
         /// 現在選択されているインデックスを返します。
         /// </summary>

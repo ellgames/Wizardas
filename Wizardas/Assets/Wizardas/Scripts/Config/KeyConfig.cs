@@ -24,6 +24,7 @@ namespace EllGames.Wiz.Config
         [OdinSerialize] public KeyCode Skill2Key { get; set; } = KeyCode.J;
         [OdinSerialize] public KeyCode Skill3Key { get; set; } = KeyCode.K;
         [OdinSerialize] public KeyCode Skill4Key { get; set; } = KeyCode.L;
+        [OdinSerialize] public KeyCode Skill5Key { get; set; } = KeyCode.H;
         [OdinSerialize] public KeyCode UpKey { get; set; } = KeyCode.UpArrow;
         [OdinSerialize] public KeyCode LeftKey { get; set; } = KeyCode.LeftArrow;
         [OdinSerialize] public KeyCode DownKey { get; set; } = KeyCode.DownArrow;

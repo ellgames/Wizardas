@@ -45,10 +45,10 @@ MonoBehaviour:
       Data: 0
     - Name: m_StoppingDistance
       Entry: 4
-      Data: 2.5
+      Data: 5
     - Name: m_AttackDistance
       Entry: 4
-      Data: 2.5
+      Data: 5
     - Name: m_KillPoint
       Entry: 3
       Data: 1000
