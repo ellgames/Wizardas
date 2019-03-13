@@ -5186,7 +5186,7 @@ MonoBehaviour:
       Data: Fire !!
     - Name: m_TextJpn
       Entry: 1
-      Data: "\u6226\u5730\u51FA\u6483\uFF01"
+      Data: "\u51FA\u9663\uFF01"
 --- !u!1 &185704347 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 58f469e0c7fed544098461c42c7d54ce,
@@ -7656,26 +7656,26 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 149982447}
-    timestamp: 636881218881553462
-  - gameObject: {fileID: 649215280}
-    timestamp: 636881218905550530
-  - gameObject: {fileID: 7067659720030839330}
-    timestamp: 636881218912120925
-  - gameObject: {fileID: 1232014509}
-    timestamp: 636881218930368429
   - gameObject: {fileID: 426980842}
-    timestamp: 636881218935336524
-  - gameObject: {fileID: 149982447}
-    timestamp: 636881219090339596
+    timestamp: 636881229911595314
   - gameObject: {fileID: 649215280}
-    timestamp: 636881219093447014
+    timestamp: 636881230367989662
   - gameObject: {fileID: 149982447}
-    timestamp: 636881219460347465
-  - gameObject: {fileID: 649215280}
-    timestamp: 636881228791872539
-  - gameObject: {fileID: 149982447}
-    timestamp: 636881228801482632
+    timestamp: 636881230392662578
+  - gameObject: {fileID: 64797310}
+    timestamp: 636881231343552241
+  - gameObject: {fileID: 1936630670}
+    timestamp: 636881231373635654
+  - gameObject: {fileID: 1550164758}
+    timestamp: 636881231382667855
+  - gameObject: {fileID: 982241460}
+    timestamp: 636881231389898892
+  - gameObject: {fileID: 833150313}
+    timestamp: 636881231392132944
+  - gameObject: {fileID: 1729263001}
+    timestamp: 636881231393780075
+  - gameObject: {fileID: 185225863}
+    timestamp: 636881231395249580
 --- !u!4 &288664630
 Transform:
   m_ObjectHideFlags: 17
@@ -10625,7 +10625,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -173, y: 11}
-  m_SizeDelta: {x: 500, y: 400}
+  m_SizeDelta: {x: 500, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426980844
 MonoBehaviour:
