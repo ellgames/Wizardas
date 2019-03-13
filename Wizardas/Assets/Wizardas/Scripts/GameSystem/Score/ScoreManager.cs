@@ -60,5 +60,10 @@ namespace EllGames.Wiz.GameSystem.Score
             m_LatestScoreProfile.AddScore(score);
             m_UltimateTextDamageManager.Add(m_PreAddScoreText + score.ToString() + m_PostAddScoreText, addScoreEffectPoint);
         }
+
+        public void Initialize()
+        {
+            m_LatestScoreProfile.Score = 0;
+        }
     }
 }
