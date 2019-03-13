@@ -26,6 +26,9 @@ namespace EllGames.Wiz.Event
         {
             base.Invoke();
 
+            var dateTime = new Meta.DateTime(System.DateTime.Now.Year, System.DateTime.Now.Month, System.DateTime.Now.Day, System.DateTime.Now.Hour, System.DateTime.Now.Minute, System.DateTime.Now.Second);
+            m_LatestScoreProfile.DateTime = dateTime;
+
             Profile.ScoreProfile highScoreProfile = null;
 
             switch (m_LatestGameProfile.GameMode)
