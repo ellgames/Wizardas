@@ -15,5 +15,16 @@ namespace EllGames.Wiz.Extension
         {
             return self[Random.Range(0, self.Count)];
         }
+
+        public static bool Contains<T>(this List<T> self, T value)
+        {
+            foreach(var content in self)
+            {
+                if (Equals(content, value)) return true;
+            }
+
+            return false;
+        }
     }
 }
+
