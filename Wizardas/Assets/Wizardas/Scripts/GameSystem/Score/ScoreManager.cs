@@ -30,19 +30,19 @@ namespace EllGames.Wiz.GameSystem.Score
                     mag = 1f;
                     break;
                 case Meta.GAME_DIFFICULTY.Novice:
-                    mag = 0.8f;
+                    mag = 1f;
                     break;
                 case Meta.GAME_DIFFICULTY.Hard:
-                    mag = 1f;
+                    mag = 1.1f;
                     break;
                 case Meta.GAME_DIFFICULTY.Veteran:
                     mag = 1.2f;
                     break;
                 case Meta.GAME_DIFFICULTY.Master:
-                    mag = 1.5f;
+                    mag = 1.3f;
                     break;
                 case Meta.GAME_DIFFICULTY.Impossible:
-                    mag = 2.0f;
+                    mag = 1.3f;
                     break;
             }
 

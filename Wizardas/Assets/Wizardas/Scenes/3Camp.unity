@@ -3749,7 +3749,7 @@ RectTransform:
   m_LocalScale: {x: 0.41642156, y: 0.41642156, z: 0.41642156}
   m_Children: []
   m_Father: {fileID: 955705558}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3871,7 +3871,7 @@ MonoBehaviour:
       Data: Description
     - Name: m_FinalFightMode_Jpn
       Entry: 1
-      Data: "\u6B7B\u306C\u307E\u3067\u6226\u3046\u3002\u4E00\u6483\u3067\u3082\u55B0\u3089\u3046\u3068\u5373\u6B7B\u3002"
+      Data: "\u6B7B\u306C\u307E\u3067\u6226\u3046\u3002\u56DE\u5FA9\u30B9\u30AD\u30EB\u4F7F\u7528\u4E0D\u53EF\u3002"
     - Name: m_FinalFightMode_Eng
       Entry: 1
       Data: Description
@@ -7656,26 +7656,26 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
+  - gameObject: {fileID: 1216208378}
+    timestamp: 636881344947344981
+  - gameObject: {fileID: 1990759233}
+    timestamp: 636881344951440002
+  - gameObject: {fileID: 1216208378}
+    timestamp: 636881344956114935
+  - gameObject: {fileID: 830953483}
+    timestamp: 636881344959129747
+  - gameObject: {fileID: 1442049102}
+    timestamp: 636881344963870285
+  - gameObject: {fileID: 2041352623}
+    timestamp: 636881344967194740
+  - gameObject: {fileID: 233343519}
+    timestamp: 636881344971217727
   - gameObject: {fileID: 426980842}
-    timestamp: 636881229911595314
-  - gameObject: {fileID: 649215280}
-    timestamp: 636881230367989662
-  - gameObject: {fileID: 149982447}
-    timestamp: 636881230392662578
-  - gameObject: {fileID: 64797310}
-    timestamp: 636881231343552241
-  - gameObject: {fileID: 1936630670}
-    timestamp: 636881231373635654
-  - gameObject: {fileID: 1550164758}
-    timestamp: 636881231382667855
-  - gameObject: {fileID: 982241460}
-    timestamp: 636881231389898892
-  - gameObject: {fileID: 833150313}
-    timestamp: 636881231392132944
-  - gameObject: {fileID: 1729263001}
-    timestamp: 636881231393780075
-  - gameObject: {fileID: 185225863}
-    timestamp: 636881231395249580
+    timestamp: 636881344990963340
+  - gameObject: {fileID: 233343519}
+    timestamp: 636881345003145883
+  - gameObject: {fileID: 426980842}
+    timestamp: 636881345133730359
 --- !u!4 &288664630
 Transform:
   m_ObjectHideFlags: 17
@@ -16467,7 +16467,7 @@ RectTransform:
   m_LocalScale: {x: 0.41642156, y: 0.41642156, z: 0.41642156}
   m_Children: []
   m_Father: {fileID: 955705558}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -24940,9 +24940,9 @@ RectTransform:
   - {fileID: 1936630671}
   - {fileID: 426980843}
   - {fileID: 1232014510}
-  - {fileID: 6993171322877533562}
   - {fileID: 649215281}
   - {fileID: 149982448}
+  - {fileID: 6993171322877533562}
   - {fileID: 64797311}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -61908,7 +61908,7 @@ RectTransform:
   - {fileID: 6993510465876210234}
   - {fileID: 6993780618721726758}
   m_Father: {fileID: 955705558}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

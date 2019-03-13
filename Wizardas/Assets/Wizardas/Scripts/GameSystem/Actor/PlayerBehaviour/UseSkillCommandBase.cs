@@ -39,6 +39,7 @@ namespace EllGames.Wiz.GameSystem.Actor.PlayerBehaviour
         public float CoolTimeRemain
         {
             get { return m_CoolTimeRemain; }
+            set { m_CoolTimeRemain = value; }
         }
 
         public virtual void Execute()
