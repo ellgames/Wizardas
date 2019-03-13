@@ -3871,7 +3871,7 @@ MonoBehaviour:
       Data: Description
     - Name: m_FinalFightMode_Jpn
       Entry: 1
-      Data: "\u6B7B\u306C\u307E\u3067\u6226\u3046\u3002\u4E00\u6483\u3067\u3082\u55B0\u3089\u3046\u3068\u5373\u6B7B\u3002"
+      Data: "\u6B7B\u306C\u307E\u3067\u6226\u3046\u3002\u56DE\u5FA9\u30B9\u30AD\u30EB\u4F7F\u7528\u4E0D\u53EF\u3002"
     - Name: m_FinalFightMode_Eng
       Entry: 1
       Data: Description
@@ -7656,26 +7656,26 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 7067659720030839330}
-    timestamp: 636881287580029848
-  - gameObject: {fileID: 7068350815467301920}
-    timestamp: 636881287924059755
-  - gameObject: {fileID: 7067807015297176812}
-    timestamp: 636881288126317226
-  - gameObject: {fileID: 1936630670}
-    timestamp: 636881288317160847
-  - gameObject: {fileID: 955705554}
-    timestamp: 636881307820785997
-  - gameObject: {fileID: 7067659720030839330}
-    timestamp: 636881307869119201
-  - gameObject: {fileID: 64797310}
-    timestamp: 636881307885665823
-  - gameObject: {fileID: 7067659720030839330}
-    timestamp: 636881307902911217
+  - gameObject: {fileID: 830953483}
+    timestamp: 636881327395522947
+  - gameObject: {fileID: 1442049102}
+    timestamp: 636881327397912459
+  - gameObject: {fileID: 2041352623}
+    timestamp: 636881327403816314
+  - gameObject: {fileID: 233343519}
+    timestamp: 636881327405711305
+  - gameObject: {fileID: 426980842}
+    timestamp: 636881327411471617
   - gameObject: {fileID: 1232014509}
-    timestamp: 636881307930044923
-  - gameObject: {fileID: 1486429196}
-    timestamp: 636881308100446581
+    timestamp: 636881327417137450
+  - gameObject: {fileID: 149982447}
+    timestamp: 636881327420959566
+  - gameObject: {fileID: 649215280}
+    timestamp: 636881327433325952
+  - gameObject: {fileID: 149982447}
+    timestamp: 636881327437226253
+  - gameObject: {fileID: 7067659720030839330}
+    timestamp: 636881327958616528
 --- !u!4 &288664630
 Transform:
   m_ObjectHideFlags: 17

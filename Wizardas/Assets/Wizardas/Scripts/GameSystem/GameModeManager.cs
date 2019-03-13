@@ -26,6 +26,7 @@ namespace EllGames.Wiz.GameSystem
 
         [Title("Final Fight Mode")]
         [OdinSerialize] int m_PlayerMaxHP_FinalFightMode = 1;
+        [OdinSerialize] Actor.PlayerBehaviour.UseSkillCommandBase m_QuicuCureCommand;
 
         public void Initialize()
         {
@@ -44,6 +45,7 @@ namespace EllGames.Wiz.GameSystem
                     break;
                 case Meta.GAME_MODE.FinalFight:
                     m_PlayerStatus.SetMaxHP(m_PlayerMaxHP_FinalFightMode);
+                    m_QuicuCureCommand.CoolTimeRemain = m_QuicuCureCommand.SkillInfo.CoolTimeSec;
                     break;
             }
 
@@ -68,10 +70,25 @@ namespace EllGames.Wiz.GameSystem
                     break;
                 case Meta.GAME_MODE.FinalFight:
                     m_PlayerStatus.SetMaxHP(m_PlayerMaxHP_FinalFightMode);
+                    m_QuicuCureCommand.CoolTimeRemain = m_QuicuCureCommand.SkillInfo.CoolTimeSec;
                     break;
             }
 
             m_PlayerStatus.FullRecovery();
+        }
+
+        private void Update()
+        {
+            switch (m_LatestGameProfile.GameMode)
+            {
+                case Meta.GAME_MODE.Training:
+                    break;
+                case Meta.GAME_MODE.LimitFight:
+                    break;
+                case Meta.GAME_MODE.FinalFight:
+                    m_QuicuCureCommand.CoolTimeRemain = m_QuicuCureCommand.SkillInfo.CoolTimeSec;
+                    break;
+            }
         }
     }
 }
