@@ -23,31 +23,31 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_Score
       Entry: 3
-      Data: 0
+      Data: 300000
     - Name: m_ActorName
       Entry: 1
-      Data: '-'
+      Data: 
     - Name: m_DateTime
       Entry: 7
       Data: EllGames.Wiz.Meta.DateTime, Assembly-CSharp
     - Name: Year
       Entry: 3
-      Data: 0
+      Data: 2019
     - Name: Month
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: Day
       Entry: 3
-      Data: 0
+      Data: 14
     - Name: Hour
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: Minute
       Entry: 3
-      Data: 0
+      Data: 55
     - Name: Second
       Entry: 3
-      Data: 0
+      Data: 58
     - Name: 
       Entry: 8
       Data: 
