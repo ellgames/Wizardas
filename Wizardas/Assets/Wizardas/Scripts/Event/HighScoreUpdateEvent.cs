@@ -13,6 +13,7 @@ namespace EllGames.Wiz.Event
     {
         [Title("Required")]
         [OdinSerialize, Required] Profile.GameProfile m_LatestGameProfile;
+        [OdinSerialize, Required] Profile.PlayerProfile m_PlayerProfile;
         [OdinSerialize, Required] Profile.ScoreProfile m_LatestScoreProfile;
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_MA;
         [OdinSerialize, Required] Profile.ScoreProfile m_HighScoreProfile_LF_IM;
@@ -62,6 +63,7 @@ namespace EllGames.Wiz.Event
                 if (m_LatestScoreProfile.Score >= highScoreProfile.Score)
                 {
                     highScoreProfile.Copy(m_LatestScoreProfile);
+                    highScoreProfile.ActorName = m_PlayerProfile.PlayerName;
                     if (m_OnNewHighScoreRecorded != null) m_OnNewHighScoreRecorded.Invoke();
                 }
             }

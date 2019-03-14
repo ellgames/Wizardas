@@ -7656,12 +7656,6 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 1936630670}
-    timestamp: 636881694666062108
-  - gameObject: {fileID: 426980842}
-    timestamp: 636881694668431590
-  - gameObject: {fileID: 1232014509}
-    timestamp: 636881694673910728
   - gameObject: {fileID: 649215280}
     timestamp: 636881694678441632
   - gameObject: {fileID: 1232014509}
@@ -7676,6 +7670,12 @@ MonoBehaviour:
     timestamp: 636881694722931029
   - gameObject: {fileID: 463056324}
     timestamp: 636881694726164929
+  - gameObject: {fileID: 1936630670}
+    timestamp: 636881699197867873
+  - gameObject: {fileID: 339175385}
+    timestamp: 636881699216185556
+  - gameObject: {fileID: 463056324}
+    timestamp: 636881699222285587
 --- !u!4 &288664630
 Transform:
   m_ObjectHideFlags: 17
@@ -11775,7 +11775,7 @@ MonoBehaviour:
     m_LineSpacing: 1.3
   m_Text: '# HIGH SCORE
 
-    NAME : TestPlayer
+    NAME : NoNamePlayer
 
     SCORE : 123,456 Points
 
