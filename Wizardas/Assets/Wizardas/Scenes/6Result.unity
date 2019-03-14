@@ -2846,12 +2846,6 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 651817976}
-    timestamp: 636881666204602025
-  - gameObject: {fileID: 1802021505}
-    timestamp: 636881666226433032
-  - gameObject: {fileID: 482920134}
-    timestamp: 636881666249863694
   - gameObject: {fileID: 1802021505}
     timestamp: 636881666262525503
   - gameObject: {fileID: 2098117620}
@@ -2866,6 +2860,12 @@ MonoBehaviour:
     timestamp: 636881666312004699
   - gameObject: {fileID: 2036440525}
     timestamp: 636881666314647492
+  - gameObject: {fileID: 2098117620}
+    timestamp: 636881701104602634
+  - gameObject: {fileID: 1306291715}
+    timestamp: 636881701118817700
+  - gameObject: {fileID: 1154285285}
+    timestamp: 636881701130233293
 --- !u!4 &1151084146
 Transform:
   m_ObjectHideFlags: 17
@@ -8168,6 +8168,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 934301430687f244e9333edad1b557d4, type: 2}
+    - {fileID: 11400000, guid: 62f44ab6473dbd344a0aba85c6b44d5b, type: 2}
     - {fileID: 11400000, guid: 463be815e163a5648922db08d9ec53d9, type: 2}
     - {fileID: 11400000, guid: 91caba8f7c114bc4eb7c8c3ff5475b3b, type: 2}
     - {fileID: 11400000, guid: eaa578788afa3c74697a5f4a1201095e, type: 2}
@@ -8189,21 +8190,24 @@ MonoBehaviour:
     - Name: m_LatestGameProfile
       Entry: 10
       Data: 0
-    - Name: m_LatestScoreProfile
+    - Name: m_PlayerProfile
       Entry: 10
       Data: 1
-    - Name: m_HighScoreProfile_LF_MA
+    - Name: m_LatestScoreProfile
       Entry: 10
       Data: 2
-    - Name: m_HighScoreProfile_LF_IM
+    - Name: m_HighScoreProfile_LF_MA
       Entry: 10
       Data: 3
-    - Name: m_HighScoreProfile_FF_MA
+    - Name: m_HighScoreProfile_LF_IM
       Entry: 10
       Data: 4
-    - Name: m_HighScoreProfile_FF_IM
+    - Name: m_HighScoreProfile_FF_MA
       Entry: 10
       Data: 5
+    - Name: m_HighScoreProfile_FF_IM
+      Entry: 10
+      Data: 6
     - Name: m_OnNewHighScoreRecorded
       Entry: 7
       Data: 0|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
@@ -8222,7 +8226,7 @@ MonoBehaviour:
       Data: 3|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 6
+      Data: 7
     - Name: m_MethodName
       Entry: 1
       Data: SetActive
@@ -8234,7 +8238,7 @@ MonoBehaviour:
       Data: 4|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 7
+      Data: 8
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
