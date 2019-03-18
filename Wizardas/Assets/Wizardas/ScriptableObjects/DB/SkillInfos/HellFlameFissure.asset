@@ -43,7 +43,7 @@ MonoBehaviour:
       Data: "\u9B54\u5C0E\u306E\u529B\u3092\u6975\u9650\u307E\u3067\u9AD8\u3081\u305F\u4E0A\u7D1A\u30B9\u30AD\u30EB"
     - Name: m_Description_Eng
       Entry: 1
-      Data: Description text here.
+      Data: Wizard's advanced skill.
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 1

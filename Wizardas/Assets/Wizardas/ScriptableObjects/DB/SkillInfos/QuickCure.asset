@@ -43,7 +43,7 @@ MonoBehaviour:
       Data: "\u8CA0\u306E\u30A8\u30CD\u30EB\u30AE\u30FC\u3092\u51DD\u7E2E\u3057\u8853\u8005\u3092\u6CBB\u7642\u3059\u308B\u3002"
     - Name: m_Description_Eng
       Entry: 1
-      Data: The standard attack.
+      Data: Condensing negative energy to cure the surgeon.
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 1

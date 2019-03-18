@@ -3754,7 +3754,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 627, y: -406}
-  m_SizeDelta: {x: 800, y: 50}
+  m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &149982449
 MonoBehaviour:
@@ -3819,7 +3819,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Description text here
+  m_Text: Fight until you die. Recovery skills not available.
 --- !u!222 &149982452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7656,26 +7656,26 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 7068148301642830082}
-    timestamp: 636885528833673869
-  - gameObject: {fileID: 7068350815467301920}
-    timestamp: 636885528836827761
-  - gameObject: {fileID: 7068148301642830082}
-    timestamp: 636885529328367793
-  - gameObject: {fileID: 7068387431244088162}
-    timestamp: 636885529338903812
-  - gameObject: {fileID: 7068148301642830082}
-    timestamp: 636885530378830212
-  - gameObject: {fileID: 7067659720030839330}
-    timestamp: 636885530382736263
   - gameObject: {fileID: 149982447}
-    timestamp: 636885530390638867
-  - gameObject: {fileID: 7067659720030839330}
-    timestamp: 636885530397639199
-  - gameObject: {fileID: 64797310}
-    timestamp: 636885530401000136
+    timestamp: 636885532587317679
+  - gameObject: {fileID: 955705554}
+    timestamp: 636885532625932230
+  - gameObject: {fileID: 426980842}
+    timestamp: 636885532638119347
+  - gameObject: {fileID: 1232014509}
+    timestamp: 636885532643012172
+  - gameObject: {fileID: 426980842}
+    timestamp: 636885532648116669
+  - gameObject: {fileID: 649215280}
+    timestamp: 636885532824940185
   - gameObject: {fileID: 149982447}
-    timestamp: 636885530411046231
+    timestamp: 636885532841827214
+  - gameObject: {fileID: 649215280}
+    timestamp: 636885532899190862
+  - gameObject: {fileID: 426980842}
+    timestamp: 636885532908853177
+  - gameObject: {fileID: 149982447}
+    timestamp: 636885532930161814
 --- !u!4 &288664630
 Transform:
   m_ObjectHideFlags: 17

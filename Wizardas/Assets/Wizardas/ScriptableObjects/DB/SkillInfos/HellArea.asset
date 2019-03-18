@@ -43,7 +43,7 @@ MonoBehaviour:
       Data: "\u5730\u7344\u306E\u70D9\u5370\u306B\u89E6\u308C\u305F\u8005\u306F\u547D\u3092\u843D\u3068\u3059"
     - Name: m_Description_Eng
       Entry: 1
-      Data: Description text here.
+      Data: Those who touch the seal of hell lose their lives.
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 1

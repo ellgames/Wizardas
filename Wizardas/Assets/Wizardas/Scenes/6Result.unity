@@ -2846,26 +2846,26 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
-  - gameObject: {fileID: 1802021505}
-    timestamp: 636881666262525503
-  - gameObject: {fileID: 2098117620}
-    timestamp: 636881666280934811
-  - gameObject: {fileID: 385989141}
-    timestamp: 636881666299288770
-  - gameObject: {fileID: 791185909}
-    timestamp: 636881666301005884
-  - gameObject: {fileID: 482920134}
-    timestamp: 636881666302582776
-  - gameObject: {fileID: 412086814}
-    timestamp: 636881666312004699
-  - gameObject: {fileID: 2036440525}
-    timestamp: 636881666314647492
-  - gameObject: {fileID: 2098117620}
-    timestamp: 636881701104602634
   - gameObject: {fileID: 1306291715}
     timestamp: 636881701118817700
   - gameObject: {fileID: 1154285285}
     timestamp: 636881701130233293
+  - gameObject: {fileID: 2098117620}
+    timestamp: 636885538954686192
+  - gameObject: {fileID: 851248948}
+    timestamp: 636885538975381791
+  - gameObject: {fileID: 1836818890}
+    timestamp: 636885538977723427
+  - gameObject: {fileID: 1902616448}
+    timestamp: 636885538983711764
+  - gameObject: {fileID: 1044607540102844963}
+    timestamp: 636885538986098729
+  - gameObject: {fileID: 1902616448}
+    timestamp: 636885538993202856
+  - gameObject: {fileID: 400220759}
+    timestamp: 636885538997128344
+  - gameObject: {fileID: 1654322789}
+    timestamp: 636885539001769139
 --- !u!4 &1151084146
 Transform:
   m_ObjectHideFlags: 17
@@ -3688,7 +3688,8 @@ MonoBehaviour:
       Data: 0
     - Name: m_TextEng
       Entry: 1
-      Data: Text
+      Data: The score will not be saved unless the difficulty is equal to or higher
+        than the master !!
     - Name: m_TextJpn
       Entry: 1
       Data: "\u96E3\u6613\u5EA6\u304C\u30DE\u30B9\u30BF\u30FC\u4EE5\u4E0A\u3067\u306A\u3044\u3068\u3001

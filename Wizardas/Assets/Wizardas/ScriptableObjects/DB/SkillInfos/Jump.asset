@@ -43,7 +43,7 @@ MonoBehaviour:
       Data: "\u9B54\u5C0E\u306E\u529B\u3067\u7A7A\u9AD8\u304F\u30B8\u30E3\u30F3\u30D7\u3059\u308B"
     - Name: m_Description_Eng
       Entry: 1
-      Data: Description text here.
+      Data: Jump high with magical power.
     - Name: m_UsingTimeSec
       Entry: 4
       Data: 0
