@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 1
     - Name: m_Tutorial
       Entry: 5
-      Data: true
+      Data: false
     - Name: m_StartFromTitle
       Entry: 5
       Data: false
