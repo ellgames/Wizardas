@@ -16,8 +16,8 @@ namespace EllGames.Wiz.UI.Hud
         [OdinSerialize, Required] Profile.SystemProfile m_SystemProfile;
 
         [Title("Settings")]
-        [OdinSerialize] string m_TextEng = "Text";
-        [OdinSerialize] string m_TextJpn = "テキスト";
+        [OdinSerialize, TextArea(1, 20)] string m_TextEng = "Text";
+        [OdinSerialize, TextArea(1, 20)] string m_TextJpn = "テキスト";
 
         Text m_Text;
 
