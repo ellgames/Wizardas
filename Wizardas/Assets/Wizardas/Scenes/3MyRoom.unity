@@ -1214,26 +1214,26 @@ MonoBehaviour:
     - gameObjects: []
     - gameObjects: []
   m_RecentGameObjects:
+  - gameObject: {fileID: 1427585137}
+    timestamp: 636885586988101955
   - gameObject: {fileID: 2389791119304709566}
-    timestamp: 636885563588135274
+    timestamp: 636885587065515016
   - gameObject: {fileID: 1799679466}
-    timestamp: 636885563606782633
+    timestamp: 636885587221999016
   - gameObject: {fileID: 1258931064}
-    timestamp: 636885563608503674
-  - gameObject: {fileID: 2389791119304709566}
-    timestamp: 636885563635992922
+    timestamp: 636885587226949727
   - gameObject: {fileID: 1799679466}
-    timestamp: 636885563642783338
+    timestamp: 636885587625168800
   - gameObject: {fileID: 1258931064}
-    timestamp: 636885564013771011
+    timestamp: 636885587697841187
   - gameObject: {fileID: 1799679466}
-    timestamp: 636885564343108271
-  - gameObject: {fileID: 446821776}
-    timestamp: 636885564411369013
+    timestamp: 636885587733145797
   - gameObject: {fileID: 1258931064}
-    timestamp: 636885564416001924
+    timestamp: 636885587754921271
   - gameObject: {fileID: 1799679466}
-    timestamp: 636885564442407480
+    timestamp: 636885587895116984
+  - gameObject: {fileID: 8609626904663455564}
+    timestamp: 636885588266019156
 --- !u!4 &87888395
 Transform:
   m_ObjectHideFlags: 17
@@ -16488,11 +16488,11 @@ MonoBehaviour:
       Data: Vermilion Order
     - Name: m_Description_Jpn
       Entry: 1
-      Data: "\u30EA\u30DF\u30C3\u30C8\u30D5\u30A1\u30A4\u30C8/\u30DE\u30B9\u30BF\u30FC\u3067300,000\u30B9\u30B3\u30A2\u4EE5\u4E0A\u3092\u7372\u5F97\u3059\u308B\u3068\u958B\u653E\u3002"
+      Data: "\u30EA\u30DF\u30C3\u30C8\u30D5\u30A1\u30A4\u30C8/\u30A4\u30F3\u30DD\u30C3\u30B7\u30D6\u30EB\u3067300,000\u30B9\u30B3\u30A2\u4EE5\u4E0A\u3092\u7372\u5F97\u3059\u308B\u3068\u958B\u653E\u3002"
     - Name: m_Description_Eng
       Entry: 1
       Data: This order will be unlocked by getting the score of 300,000 or more with
-        Limit Fight / Master.
+        Limit Fight / Impossible.
     - Name: m_Unlocked_Jpn
       Entry: 1
       Data: "(\u958B\u653E\u6E08\u307F)"
@@ -23436,11 +23436,11 @@ MonoBehaviour:
       Data: Twilight Order
     - Name: m_Description_Jpn
       Entry: 1
-      Data: "\u30D5\u30A1\u30A4\u30CA\u30EB\u30D5\u30A1\u30A4\u30C8/\u30DE\u30B9\u30BF\u30FC\u3067200,000\u30B9\u30B3\u30A2\u4EE5\u4E0A\u3092\u7372\u5F97\u3059\u308B\u3068\u958B\u653E\u3002"
+      Data: "\u30D5\u30A1\u30A4\u30CA\u30EB\u30D5\u30A1\u30A4\u30C8/Impossible\u3067200,000\u30B9\u30B3\u30A2\u4EE5\u4E0A\u3092\u7372\u5F97\u3059\u308B\u3068\u958B\u653E\u3002"
     - Name: m_Description_Eng
       Entry: 1
       Data: This order will be unlocked by getting the score of 200,000 or more with
-        Final Fight / Master.
+        Final Fight / Impossible.
     - Name: m_Unlocked_Jpn
       Entry: 1
       Data: "(\u958B\u653E\u6E08\u307F)"
