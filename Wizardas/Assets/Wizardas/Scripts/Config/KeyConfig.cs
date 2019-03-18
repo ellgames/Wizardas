@@ -12,25 +12,25 @@ namespace EllGames.Wiz.Config
     [CreateAssetMenu(menuName = "Config/KeyConfig", fileName = "KeyConfig")]
     public class KeyConfig : SerializedScriptableObject
     {
-        [OdinSerialize] public KeyCode MoveForwardKey { get; set; } = KeyCode.W;
-        [OdinSerialize] public KeyCode MoveLeftKey { get; set; } = KeyCode.A;
-        [OdinSerialize] public KeyCode MoveBackwardKey { get; set; } = KeyCode.S;
-        [OdinSerialize] public KeyCode MoveRightKey { get; set; } = KeyCode.D;
-        [OdinSerialize] public KeyCode JumpKey { get; set; } = KeyCode.Space;
-        [OdinSerialize] public KeyCode StopKey1 { get; set; } = KeyCode.LeftControl;
-        [OdinSerialize] public KeyCode StopKey2 { get; set; } = KeyCode.RightControl;
-        [OdinSerialize] public List<KeyCode> WalkTriggers = new List<KeyCode> { KeyCode.LeftShift, KeyCode.RightShift };
-        [OdinSerialize] public KeyCode Skill1Key { get; set; } = KeyCode.I;
-        [OdinSerialize] public KeyCode Skill2Key { get; set; } = KeyCode.J;
-        [OdinSerialize] public KeyCode Skill3Key { get; set; } = KeyCode.K;
-        [OdinSerialize] public KeyCode Skill4Key { get; set; } = KeyCode.L;
-        [OdinSerialize] public KeyCode Skill5Key { get; set; } = KeyCode.H;
-        [OdinSerialize] public KeyCode UpKey { get; set; } = KeyCode.UpArrow;
-        [OdinSerialize] public KeyCode LeftKey { get; set; } = KeyCode.LeftArrow;
-        [OdinSerialize] public KeyCode DownKey { get; set; } = KeyCode.DownArrow;
-        [OdinSerialize] public KeyCode RightKey { get; set; } = KeyCode.RightArrow;
-        [OdinSerialize] public KeyCode DecitionKey { get; set; } = KeyCode.Return;
-        [OdinSerialize] public KeyCode CancelKey { get; set; } = KeyCode.Escape;
-        [OdinSerialize] public KeyCode YesKey { get; set; } = KeyCode.Y;
+        [SerializeField] public KeyCode MoveForwardKey { get; set; } = KeyCode.W;
+        [SerializeField] public KeyCode MoveLeftKey { get; set; } = KeyCode.A;
+        [SerializeField] public KeyCode MoveBackwardKey { get; set; } = KeyCode.S;
+        [SerializeField] public KeyCode MoveRightKey { get; set; } = KeyCode.D;
+        [SerializeField] public KeyCode JumpKey { get; set; } = KeyCode.Space;
+        [SerializeField] public KeyCode StopKey1 { get; set; } = KeyCode.LeftControl;
+        [SerializeField] public KeyCode StopKey2 { get; set; } = KeyCode.RightControl;
+        [SerializeField] public List<KeyCode> WalkTriggers = new List<KeyCode> { KeyCode.LeftShift, KeyCode.RightShift };
+        [SerializeField] public KeyCode Skill1Key { get; set; } = KeyCode.I;
+        [SerializeField] public KeyCode Skill2Key { get; set; } = KeyCode.J;
+        [SerializeField] public KeyCode Skill3Key { get; set; } = KeyCode.K;
+        [SerializeField] public KeyCode Skill4Key { get; set; } = KeyCode.L;
+        [SerializeField] public KeyCode Skill5Key { get; set; } = KeyCode.H;
+        [SerializeField] public KeyCode UpKey { get; set; } = KeyCode.UpArrow;
+        [SerializeField] public KeyCode LeftKey { get; set; } = KeyCode.LeftArrow;
+        [SerializeField] public KeyCode DownKey { get; set; } = KeyCode.DownArrow;
+        [SerializeField] public KeyCode RightKey { get; set; } = KeyCode.RightArrow;
+        [SerializeField] public KeyCode DecitionKey { get; set; } = KeyCode.Return;
+        [SerializeField] public KeyCode CancelKey { get; set; } = KeyCode.Escape;
+        [SerializeField] public KeyCode YesKey { get; set; } = KeyCode.Y;
     }
 }
