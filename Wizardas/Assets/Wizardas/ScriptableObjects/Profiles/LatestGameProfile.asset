@@ -23,7 +23,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_GameDifficulty
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: m_GameMode
       Entry: 3
       Data: 0
