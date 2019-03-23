@@ -26,10 +26,10 @@ MonoBehaviour:
       Data: Player
     - Name: m_MaxHP
       Entry: 3
-      Data: 1000
+      Data: 1
     - Name: m_HP
       Entry: 3
-      Data: 1000
+      Data: 1
     - Name: m_ATK
       Entry: 3
       Data: 1

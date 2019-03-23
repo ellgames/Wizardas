@@ -60,7 +60,11 @@ namespace EllGames.Wiz.Event
 
             if (highScoreProfile != null)
             {
-                if (m_LatestScoreProfile.Score >= highScoreProfile.Score)
+                Debug.Log(m_LatestScoreProfile.Score);
+                Debug.Log(highScoreProfile.Score);
+                Debug.Log(highScoreProfile);
+
+                if (m_LatestScoreProfile.Score > highScoreProfile.Score)
                 {
                     highScoreProfile.Copy(m_LatestScoreProfile);
                     highScoreProfile.ActorName = m_PlayerProfile.PlayerName;

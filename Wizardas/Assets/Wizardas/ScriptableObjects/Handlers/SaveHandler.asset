@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SaveHandler
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
-    SerializedBytes: 01000b0000006d5f4953617661626c65732f00000000005a00000053797374656d2e436f6c6c656374696f6e732e47656e657269632e4c69737460315b5b456c6c47616d65732e57697a2e536176652e4953617661626c652c20417373656d626c792d4353686172705d5d2c206d73636f726c6962000000000609000000000000000c000000000c010000000c020000000c030000000c040000000c050000000c060000000c070000000c080000000705
+    SerializedFormat: 2
+    SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 5370384a35d3c7b49a6dec0f76c0ad4e, type: 2}
     - {fileID: 11400000, guid: 808d34a6a8c224344936c5e9796da97a, type: 2}
@@ -29,4 +29,44 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: m_ISavables
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EllGames.Wiz.Save.ISavable, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
