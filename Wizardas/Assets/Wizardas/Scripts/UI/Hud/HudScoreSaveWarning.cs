@@ -9,7 +9,7 @@ using Sirenix.Serialization;
 
 namespace EllGames.Wiz.UI.Hud
 {
-    public class HudScoreSaveWarning : HudComponent
+    public class HudScoreSaveWarning : SerializedMonoBehaviour
     {
 	    [OdinSerialize, Required] Profile.GameProfile LatestGameProfile { get; set; }
 

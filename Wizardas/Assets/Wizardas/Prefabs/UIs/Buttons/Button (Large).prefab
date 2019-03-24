@@ -208,50 +208,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 0b00090000006d5f506f696e7465720000000001000b0000006d5f4f6e446563696465642f000000000035000000556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652e436f72654d6f64756c65000000000100110000006d5f50657273697374656e7443616c6c732f01000000003e000000556e697479456e67696e652e4576656e74732e50657273697374656e7443616c6c47726f75702c20556e697479456e67696e652e436f72654d6f64756c65010000000100070000006d5f43616c6c732f02000000006800000053797374656d2e436f6c6c656374696f6e732e47656e657269632e4c69737460315b5b556e697479456e67696e652e4576656e74732e50657273697374656e7443616c6c2c20556e697479456e67696e652e436f72654d6f64756c655d5d2c206d73636f726c69620200000006000000000000000007050527000a0000006d5f547970654e616d65006c000000556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652e436f72654d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c052b000c0000006d5f497353656c656374656400
     ReferencedUnityObjects:
     - {fileID: 3891713080369290305}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: m_Pointer
-      Entry: 10
-      Data: 0
-    - Name: m_OnDecided
-      Entry: 7
-      Data: 0|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
-    - Name: m_PersistentCalls
-      Entry: 7
-      Data: 1|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
-    - Name: m_Calls
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
-        UnityEngine.CoreModule]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_TypeName
-      Entry: 1
-      Data: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_IsSelected
-      Entry: 5
-      Data: false
+    SerializationNodes: []
 --- !u!114 &3891713079014756149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,8 +687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 0b000e0000006d5f53797374656d436f6e666967000000000b00070000006d5f496d616765010000002b00130000006d5f446561637469766174654f6e4177616b6501
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: a97cf482a77b61d408248e458f3aa37b, type: 2}
     - {fileID: 3891713080369290318}
@@ -731,16 +696,7 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: m_SystemConfig
-      Entry: 10
-      Data: 0
-    - Name: m_Image
-      Entry: 10
-      Data: 1
-    - Name: m_DeactivateOnAwake
-      Entry: 5
-      Data: true
+    SerializationNodes: []
 --- !u!114 &3891713080369290318
 MonoBehaviour:
   m_ObjectHideFlags: 0

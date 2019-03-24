@@ -23,7 +23,10 @@ namespace EllGames.Wiz.Save
 #endif
 
             if (m_ISavables == null) return;
-            m_ISavables.ForEach(savable => savable.Save());
+            m_ISavables.ForEach(savable =>
+            {
+                savable.Save();
+            });
         }
 
         [Button("Load")]
@@ -34,19 +37,9 @@ namespace EllGames.Wiz.Save
 #endif
 
             if (m_ISavables == null) return;
-
             m_ISavables.ForEach(savable =>
             {
-                try
-                {
-                    savable.Load();
-                }
-                catch
-                {
-#if UNITY_EDITOR
-                    Debug.Log("Failed to Load.");
-#endif
-                }
+                savable.Load();
             });
         }
 

@@ -60,10 +60,6 @@ namespace EllGames.Wiz.Event
 
             if (highScoreProfile != null)
             {
-                Debug.Log(m_LatestScoreProfile.Score);
-                Debug.Log(highScoreProfile.Score);
-                Debug.Log(highScoreProfile);
-
                 if (m_LatestScoreProfile.Score > highScoreProfile.Score)
                 {
                     highScoreProfile.Copy(m_LatestScoreProfile);

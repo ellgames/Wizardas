@@ -21,12 +21,15 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: Eigenvalue
+      Entry: 1
+      Data: 3
     - Name: m_Score
       Entry: 3
       Data: 0
     - Name: m_ActorName
       Entry: 1
-      Data: 
+      Data: '-'
     - Name: m_DateTime
       Entry: 7
       Data: EllGames.Wiz.Meta.DateTime, Assembly-CSharp
