@@ -46,7 +46,7 @@ MonoBehaviour:
       Data: The condensed flame breaks the earth.
     - Name: m_UsingTimeSec
       Entry: 4
-      Data: 1
+      Data: 0.5
     - Name: m_CoolTimeSec
       Entry: 4
       Data: 2
