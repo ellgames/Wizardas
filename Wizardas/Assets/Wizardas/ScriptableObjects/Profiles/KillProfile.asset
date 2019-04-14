@@ -13,11 +13,35 @@ MonoBehaviour:
   m_Name: KillProfile
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
-    SerializedBytes: 1900130000004b696c6c436f756e745f5765616b47686f756c000000001900170000004b696c6c436f756e745f5765616b556e64656164456e740000000019000f0000004b696c6c436f756e745f47686f756c000000001900130000004b696c6c436f756e745f556e64656164456e74000000001900160000004b696c6c436f756e745f53756363756275734d616765000000001900150000004b696c6c436f756e745f5374726f6e6747686f756c000000001900190000004b696c6c436f756e745f5374726f6e67556e64656164456e740000000019001c0000004b696c6c436f756e745f5374726f6e6753756363756275734d61676500000000
+    SerializedFormat: 2
+    SerializedBytes: 
     ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: KillCount_WeakGhoul
+      Entry: 3
+      Data: 0
+    - Name: KillCount_WeakUndeadEnt
+      Entry: 3
+      Data: 0
+    - Name: KillCount_Ghoul
+      Entry: 3
+      Data: 0
+    - Name: KillCount_UndeadEnt
+      Entry: 3
+      Data: 0
+    - Name: KillCount_SuccubusMage
+      Entry: 3
+      Data: 0
+    - Name: KillCount_StrongGhoul
+      Entry: 3
+      Data: 0
+    - Name: KillCount_StrongUndeadEnt
+      Entry: 3
+      Data: 0
+    - Name: KillCount_StrongSuccubusMage
+      Entry: 3
+      Data: 0
